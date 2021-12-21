@@ -1,0 +1,33 @@
+.perk-view {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+.perk-view-header {
+    width: 100%;
+}
+
+.perk-view-levels {
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+
+    @media screen and (min-width: 1025px) {
+        grid-template-columns: auto auto;
+    }
+    @media screen and (min-width: 1201px) {
+        grid-template-columns: auto auto auto;
+    }
+    @media screen and (min-width: 1441px) {
+        grid-template-columns: auto auto auto auto;
+    }
+    @media screen and (min-width: 1921px) {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+
+.perk-view-level {
+    box-sizing: border-box;
+}

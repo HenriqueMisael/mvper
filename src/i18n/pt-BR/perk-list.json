@@ -1,0 +1,14 @@
+{
+    "title": "Perícias",
+    "level": "Nível {{level}}",
+    "details": [
+        "Perícias são conhecimentos específicos dos personagens que envolvem manobras e seus níveis são parâmetros para o grau de influência. Então se um Personagem já consegue desarmar armadilhas usando Operar mecanismos, logo isso não o impede e armá-la de novamente, entretanto não será verdade em certas situações, como pode ser observado na Perícias Sobrevivência que mesmo capaz de fazer fogueiras não se poderá apagar incêndios.",
+        "Cada perícia possui níveis de 1º a 5º, cada nível libera uma manobra, podendo ser executada durante os turnos dos oponentes, porem apenas 1 por rod. Cada nível possuindo Funções (») com seu custo por ½ Pd, expressos na ficha por um traço [ I ] e dois usos por um \"x\" [ X ]. Perícias com dois custos, deverá ser decidido qual das opções adotar na hora que usar a perícia. Além d'isso, algumas perícias trazem custo adiciona de A/a para adicionar mais efeitos ao uso da perícia, de [1] a [3].",
+        "As perícias possuem o “Somente” que é um requisito adicionais de RolePlayer, além das já trazidas pelas próprias perícias ou situação para se utilizar da manobra da perícia.",
+        "No 1º nível o personagem poderá escolher 2 perícias distintas d'entre as perícias da lista da Ocupação de Classe. Ao atingir o 3º , 5º, 7º e 9º Nível de Ocupação, o personagem adquire duas pericias distintas adicionais, para selecionar d'entre as perícias da lista da Ocupação de Classe. Também poderá pagar 30 de Xp para adquirir qualquer perícia ou subir os níveis de suas perícias, mesmo não constando na lista da Ocupação. Ao escolher uma perícias que já a possui, essa subirá para o próximo nível.",
+        "O conhecimento das perícias podem se complementar com os dos ofícios e especializações. Assim podendo liberar novas situações já que o indivíduo médio do contexto d’O Tomo é um ser ignorante e destreinado, a mercê de todos os perigos que se encontram e o que fará total distinção será o quão perito tal indivíduo seja."
+    ],
+    "condition": "Somente",
+    "requirement": "Requisito",
+    "preRequirement": "Pré-Requisito"
+}

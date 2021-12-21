@@ -1,18 +1,18 @@
-import React from 'react'
-import { Select } from '@blueprintjs/select'
-import { actions, selectors, useDispatch, useSelector } from '../../store'
-import { Language } from '../../i18n/config'
-import { t } from 'i18next'
-import { Button, MenuItem } from '@blueprintjs/core'
+import React from 'react';
+import { Select } from '@blueprintjs/select';
+import { actions, selectors, useDispatch, useSelector } from '../../store';
+import { Language } from '../../i18n/config';
+import { t } from 'i18next';
+import { Button, MenuItem } from '@blueprintjs/core';
 
-const LanguageSelect = Select.ofType<Language>()
+const LanguageSelect = Select.ofType<Language>();
 
 const LanguageSelector = () => {
   const language = useSelector((state) => {
-    const key = selectors.session.getLanguage(state)
-    return t(`common:language.${key}`)
-  })
-  const dispatch = useDispatch()
+    const key = selectors.session.getLanguage(state);
+    return t(`common:language.${key}`);
+  });
+  const dispatch = useDispatch();
 
   return (
     <LanguageSelect
@@ -25,7 +25,7 @@ const LanguageSelector = () => {
     >
       <Button text={language} />
     </LanguageSelect>
-  )
-}
+  );
+};
 
-export default LanguageSelector
+export default LanguageSelector;
