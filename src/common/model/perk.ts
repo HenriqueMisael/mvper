@@ -13,9 +13,25 @@ export interface PerkLevel {
 export type PerkID = string;
 
 export interface Perk {
-  id?: PerkID;
+  id: PerkID;
   name: string;
   detail: string[];
   levels: PerkLevel[];
   condition: string;
 }
+
+export const importPerks = async () => {
+  const response = await fetch('/data/perks.json');
+  const json = await response.json();
+  return json.map((perk: any, i: number) => {
+    const id = `${i + 1}`;
+    const { name, detail, levels, condition } = perk;
+    return {
+      id,
+      name,
+      detail,
+      levels,
+      condition,
+    } as Perk;
+  });
+};
