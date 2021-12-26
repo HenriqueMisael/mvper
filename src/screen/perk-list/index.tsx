@@ -1,19 +1,18 @@
 import React from 'react';
 import { H4, Menu } from '@blueprintjs/core';
-
-import { selectors, useSelector } from '../../store';
-
-import './index.scss';
-import { PerkView } from './perk-view';
 import { useParams } from 'react-router-dom';
 
+import { selectors, useSelector } from '../../store';
 import AnchorMenuItem from '../../components/anchor-menu-item';
 
+import { PerkView } from './perk-view';
 import PerksHome from './perks-home';
+import './index.scss';
 
 const PerkListScreen = () => {
   const { perkID } = useParams();
   const perks = useSelector(selectors.core.getPerks);
+  const isFetching = useSelector(selectors.core.getIsFetching);
 
   return (
     <div className="screen-root perks-screen-root">
@@ -31,7 +30,7 @@ const PerkListScreen = () => {
           );
         })}
       </Menu>
-      {perkID ? <PerkView /> : <PerksHome />}
+      {!isFetching && perkID ? <PerkView /> : <PerksHome />}
     </div>
   );
 };

@@ -19,6 +19,9 @@ const AppNavbar = () => {
         <NavLink to="/perk" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Button text={t('perk-list:title')} className={Classes.MINIMAL} />
         </NavLink>
+        <NavLink to="/talent" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Button text={t('talent-list:title')} className={Classes.MINIMAL} />
+        </NavLink>
       </Navbar.Group>
       <Navbar.Group align={Alignment.RIGHT}>
         <div className="system-preferences-parent">

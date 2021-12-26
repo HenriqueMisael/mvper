@@ -16,14 +16,14 @@ export function Level(props: { level: PerkLevel; index: number }) {
       {level.preRequirement && (
         <Label>
           <i>
-            {t('perk-list:preRequirement')}: {level.preRequirement}
+            {t('common:preRequirement')}: {level.preRequirement}
           </i>
         </Label>
       )}
       {level.requirement && (
         <Label>
           <i>
-            {t('perk-list:requirement')}: {level.requirement}
+            {t('common:requirement')}: {level.requirement}
           </i>
         </Label>
       )}

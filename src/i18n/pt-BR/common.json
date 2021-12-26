@@ -5,5 +5,7 @@
     "theme": {
         "light": "Claro",
         "dark": "Escuro"
-    }
+    },
+    "requirement": "Requisito",
+    "preRequirement": "Pré-Requisito"
 }

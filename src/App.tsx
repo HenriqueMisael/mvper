@@ -7,7 +7,8 @@ import { LoadingOverlay } from './components/loading-overlay';
 import AppNavbar from './components/app-navbar';
 import { useLoadInitialData } from './hooks/use-load-initial-data';
 import HomeScreen from './screen/home';
-
+import PerkListScreen from './screen/perk-list';
+import TalentListScreen from './screen/talent-list';
 import './App.scss';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/perk" element={<PerkListScreen />} />
           <Route path="/perk/:perkID" element={<PerkListScreen />} />
+          <Route path="/talent" element={<TalentListScreen />} />
         </Routes>
       </div>
     </div>

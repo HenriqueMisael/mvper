@@ -1,17 +1,18 @@
 import React from 'react';
 import { Card, H3 } from '@blueprintjs/core';
-import { selectors, useSelector } from '../../../store';
-import { Level } from './level';
-import './index.scss';
 import classNames from 'classnames';
 import { useParams } from 'react-router-dom';
+
+import { selectors, useSelector } from '../../../store';
+import { Level } from './level';
 import { Condition } from './condition';
+import './index.scss';
 
 export function PerkView() {
   const { perkID = '' } = useParams<{ perkID: string }>();
   const perk = useSelector((state) => {
-    const perkByPerkId = selectors.core.getPerkByPerkId(state);
-    return perkByPerkId[perkID] ?? { id: '' };
+    const perkByPerkId = selectors.core.getPerkByPerkID(state);
+    return perkByPerkId[perkID] ?? { id: '', levels: [], detail: [] };
   });
 
   return (
