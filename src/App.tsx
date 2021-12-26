@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './i18n/config';
-import AppNavbar from './components/app-navbar';
 import { selectors, useSelector } from './store';
+
+import { LoadingOverlay } from './components/loading-overlay';
+import AppNavbar from './components/app-navbar';
+import { useLoadInitialData } from './hooks/use-load-initial-data';
 import HomeScreen from './screen/home';
 
 import './App.scss';
-import PerkListScreen from './screen/perk-list';
-import { useLoadInitialData } from './hooks/use-load-initial-data';
 
 function App() {
   const themeClassName = useSelector((state) => {
@@ -21,6 +22,7 @@ function App() {
     <div className={themeClassName}>
       <AppNavbar />
       <div className="main">
+        <LoadingOverlay />
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/perk" element={<PerkListScreen />} />

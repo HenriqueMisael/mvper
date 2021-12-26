@@ -3,7 +3,11 @@ import { RootState } from '../index';
 
 const getRoot = (state: RootState) => state.core;
 
-export const getPerkByPerkId = createSelector([getRoot], (state) => {
+export const getIsFetching = createSelector([getRoot], (state) => {
+  return state.fetching === 'pending';
+});
+
+export const getPerkByPerkID = createSelector([getRoot], (state) => {
   return state.perk;
 });
 
