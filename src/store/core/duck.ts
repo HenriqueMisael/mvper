@@ -48,6 +48,5 @@ export default createSlice({
       .addCase(fetchInitialData.rejected, function (state, action) {
         state.fetching = 'idle';
         state.error = 'error';
-        console.log(action);
       }),
 });

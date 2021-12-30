@@ -7,21 +7,23 @@ import ThemeToggle from './theme-toggle';
 import './index.scss';
 import { t } from 'i18next';
 import { NavLink } from 'react-router-dom';
+import GlobalSearch from '../global-search';
 
 const AppNavbar = () => {
   return (
-    <Navbar fixedToTop>
-      <Navbar.Group>
+    <Navbar fixedToTop className="app-navbar">
+      <Navbar.Group align={Alignment.LEFT}>
         <Navbar.Heading>MVPer</Navbar.Heading>
         <Navbar.Divider />
-      </Navbar.Group>
-      <Navbar.Group align={Alignment.LEFT}>
         <NavLink to="/perk" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Button text={t('perk-list:title')} className={Classes.MINIMAL} />
         </NavLink>
         <NavLink to="/talent" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Button text={t('talent-list:title')} className={Classes.MINIMAL} />
         </NavLink>
+      </Navbar.Group>
+      <Navbar.Group align={Alignment.CENTER} className="center-navbar-group">
+        <GlobalSearch />
       </Navbar.Group>
       <Navbar.Group align={Alignment.RIGHT}>
         <div className="system-preferences-parent">

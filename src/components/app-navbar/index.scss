@@ -4,3 +4,13 @@
     grid-auto-flow: column;
     align-items: center;
 }
+
+.app-navbar {
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+}
+
+.center-navbar-group {
+    justify-self: center;
+}

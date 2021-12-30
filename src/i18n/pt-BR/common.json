@@ -7,5 +7,7 @@
         "dark": "Escuro"
     },
     "requirement": "Requisito",
-    "preRequirement": "Pré-Requisito"
+    "preRequirement": "Pré-Requisito",
+    "search": "Digite para começar a buscar (Ctrl+K)",
+    "screens": "Telas"
 }

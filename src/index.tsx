@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { FocusStyleManager } from '@blueprintjs/core';
+import { FocusStyleManager, HotkeysProvider } from '@blueprintjs/core';
 import { Provider } from 'react-redux';
 import { enableMapSet } from 'immer';
 import App from './App';
@@ -15,9 +15,11 @@ enableMapSet();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <HotkeysProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </HotkeysProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

@@ -8,6 +8,7 @@ import session from './session/duck';
 import * as sessionSelectors from './session/selectors';
 import core from './core/duck';
 import * as coreSelectors from './core/selectors';
+import * as globalSearchSelectors from '../components/global-search/slice/selectors';
 
 const store = configureStore({
   reducer: {
@@ -24,6 +25,7 @@ export const actions = {
 export const selectors = {
   core: coreSelectors,
   session: sessionSelectors,
+  globalSearch: globalSearchSelectors,
 };
 
 export type RootState = ReturnType<typeof store.getState>;

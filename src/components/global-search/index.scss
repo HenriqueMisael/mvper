@@ -1,0 +1,8 @@
+.global-search-root {
+    width: 20rem;
+    transition: width 128ms ease-out;
+
+    &:focus-within {
+        width: 24rem;
+    }
+}
