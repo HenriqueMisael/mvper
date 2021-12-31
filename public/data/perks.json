@@ -138,7 +138,7 @@
             {
                 "name": "Leveza nos movimentos",
                 "preRequirement": "Perícia Esportes N1",
-                "requirement": "Talento Evasão",
+                "requirement": "{{talent:Evasão}}",
                 "actions": [
                     {
                         "cost": 0,

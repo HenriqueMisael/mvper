@@ -2,6 +2,7 @@ import { Card, H4, Label, UL } from '@blueprintjs/core';
 import { t } from 'i18next';
 
 import { PerkLevel } from '../../../common/model/perk';
+import { ParseReferences } from '../../../components/reference';
 
 import './level.scss';
 
@@ -23,7 +24,7 @@ export function Level(props: { level: PerkLevel; index: number }) {
       {level.requirement && (
         <Label>
           <i>
-            {t('common:requirement')}: {level.requirement}
+            {t('common:requirement')}: <ParseReferences parseable={level.requirement} />
           </i>
         </Label>
       )}

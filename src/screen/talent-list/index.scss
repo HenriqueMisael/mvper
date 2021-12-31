@@ -10,7 +10,32 @@ li.talent-rank {
     text-indent: -1em;
 }
 
-li > .bullet {
-    padding-right: 4px;
-    margin-left: -1px;
+li.rank-i > .bullet {
+    margin-left: -0.5rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+
+li.rank-ii > .bullet {
+    margin-left: -0.5rem;
+    padding-right: 0.4375rem;
+    padding-left: 0.4375rem;
+}
+
+li.rank-iii > .bullet {
+    margin-left: -0.5rem;
+    padding-right: 0.325rem;
+    padding-left: 0.325rem;
+}
+
+li.rank-iv > .bullet {
+    margin-left: -0.5rem;
+    padding-right: 0.3125rem;
+    padding-left: 0.3125rem;
+}
+
+li.rank-v > .bullet {
+    margin-left: -0.5rem;
+    padding-right: 0.375rem;
+    padding-left: 0.375rem;
 }
