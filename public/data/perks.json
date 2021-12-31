@@ -12,11 +12,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Gere fogo através de fricção, sua arma recebe bônus de +1D por Fogo."
+                        "description": "Gere fogo através de fricção, sua arma recebe bônus de {{aux:D$1}} por Fogo."
                     },
                     {
                         "cost": 0,
-                        "description": "Faça uma armadilha com pedras. Role 1d12: se der 1-3, no dia seguinte terá pego um animal pequeno."
+                        "description": "Faça uma armadilha com pedras. Role {{dice:1d12}}: se der 1-3, no dia seguinte terá pego um animal pequeno."
                     }
                 ]
             },
@@ -25,7 +25,7 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Encontre pegadas d'uma criatura especificada no terreno desfavorável. Limite de Int em criaturas especializadas."
+                        "description": "Encontre pegadas d'uma criatura especificada no terreno desfavorável. Limite de {{cap:Int}} em criaturas especializadas."
                     },
                     {
                         "cost": 0,
@@ -38,7 +38,7 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Use um capuz com a cor do ambiente para se camuflar ao ficar parado, recebento +1 Furtividade."
+                        "description": "Use um capuz com a cor do ambiente para se camuflar ao ficar parado, recebento {{base:stealth$1}}."
                     },
                     {
                         "cost": 3,
@@ -55,7 +55,7 @@
                     },
                     {
                         "cost": 1,
-                        "description": "Restaure contusão curando 1d4 Pv consumindo visco e azevinho."
+                        "description": "Restaure contusão curando {{dice:1d4}} {{vit:PV}} consumindo visco e azevinho."
                     },
                     {
                         "cost": 2,
@@ -68,12 +68,12 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Consuma 3 A/a, implante a prótese ou repor o membro no lugar dum membro perdido. Cada rod que o alvo passar sem o membro, será em dias pós operatório para poder usá-lo."
+                        "description": "Consuma 3 {{action:Aa}}, implante a prótese ou repor o membro no lugar dum membro perdido. Cada {{time:rod}} que o alvo passar sem o membro, será em dias pós operatório para poder usá-lo."
                     }
                 ]
             }
         ],
-        "condition": "Para sobrevivência N1, o material provocar faíscas ou esquente como metais e madeiras para improvisar fogo através de pedras, galhos, sol. Os demais níveis já se auto especificam."
+        "condition": "Para {{perk:Sobrevivência$1}}, o material provocar faíscas ou esquente como metais e madeiras para improvisar fogo através de pedras, galhos, sol. Os demais níveis já se auto especificam."
     },
     {
         "name": "Acrobacia",
@@ -88,11 +88,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Adquira Des em DLs durante o movimento"
+                        "description": "Adquira {{cap:dex}} em {{action:Dl}} durante o movimento"
                     },
                     {
                         "cost": 0,
-                        "description": "Adquira 1 A/a para desferir um ataque de oportunidade"
+                        "description": "Adquira {{action:Aa$1}} para desferir um ataque de oportunidade"
                     }
                 ]
             },
@@ -101,11 +101,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Receba um ônus de -1 na Eq durante 1 rod e um bônus de +2 circunstância naquele ataque."
+                        "description": "Receba um {{onus:circunstância$1}} na {{aux:Eq}} durante {{time:rod$1}} e um bônus de {{bon:circunstância$2}} naquele ataque."
                     },
                     {
                         "cost": 2,
-                        "description": "Aumente o bônus para +3 e o ônus com -2."
+                        "description": "Receba um {{onus:circunstância$2}} na {{aux:Eq}} durante {{time:rod$1}} e um bônus de {{bon:circunstância$3}} naquele ataque."
                     }
                 ]
             },
@@ -114,11 +114,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Receba um bônus de +1 na Eq durante 1 rod e um ônus de -2 circunstância naquele ataque."
+                        "description": "Receba um {{bon:circunstância$1}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:circunstância$2}} naquele ataque."
                     },
                     {
                         "cost": 2,
-                        "description": "Aumente o bônus para +2 e o ônus com -3."
+                        "description": "Receba um {{bon:circunstância$2}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:circunstância$3}} naquele ataque."
                     }
                 ]
             },
@@ -127,11 +127,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Ignore [x]d6 dano por queda. Max.: 2"
+                        "description": "Ignore {{dice:xd6}} dano por queda. Max.: 2"
                     },
                     {
                         "cost": 0,
-                        "description": "Adicione um bônus de +1d6 de circunstância de Fort do aliado, em queda, que for amparado por você."
+                        "description": "Adicione um {{bonus:circunstância}} de {{dice:1d6}} de {{aux:fort}} do aliado, em queda, que for amparado por você."
                     }
                 ]
             },
@@ -142,7 +142,7 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Corra no teto ou até sobre a baforada de um dragão. Receba um bônus de +2 naquele Teste de Eq."
+                        "description": "Corra no teto ou até sobre a baforada de um dragão. Receba um {{bonus:ability$2}} naquele {{base:Eq}}"
                     }
                 ]
             }

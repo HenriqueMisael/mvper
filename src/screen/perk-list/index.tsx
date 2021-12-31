@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import { selectors, useSelector } from '../../store';
-import ComplexEntityList from '../../components/complex-entity-list';
+import ComplexEntityList from '../../components/complex-entity/complex-entity-list';
 
 import { PerkView } from './perk-view';
 

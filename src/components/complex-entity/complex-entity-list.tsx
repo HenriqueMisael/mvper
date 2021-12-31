@@ -3,7 +3,7 @@ import { H4, Menu } from '@blueprintjs/core';
 
 import AnchorMenuItem from '../anchor-menu-item';
 
-import './index.scss';
+import './complex-entity-list.scss';
 import ComplexEntityListHome from './home';
 import { ComplexEntity } from '../../common/model/complex-entity';
 

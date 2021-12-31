@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 
 import TalentReference from './talent-reference';
 import UnknownReference from './unknown-reference';
+import CapacityReference from './capacity-reference';
 
 export interface ReferenceComponentProps {
   name: string;
@@ -9,6 +10,7 @@ export interface ReferenceComponentProps {
 type ReferenceComponent = (props: ReferenceComponentProps) => ReactElement;
 const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   talent: TalentReference,
+  cap: CapacityReference,
 };
 
 interface ParseReferencesProps {
@@ -20,10 +22,8 @@ export const ParseReferences = (props: ParseReferencesProps) => {
 
   const groups = [];
 
-  let startIndex = 0;
   let remaining = parseable;
-
-  startIndex = remaining.indexOf('{{');
+  let startIndex = remaining.indexOf('{{');
   while (startIndex >= 0) {
     const before = remaining.substring(0, startIndex);
     const endIndex = startIndex + remaining.substring(startIndex).indexOf('}}');

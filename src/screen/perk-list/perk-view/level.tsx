@@ -34,7 +34,7 @@ export function Level(props: { level: PerkLevel; index: number }) {
           return (
             <li key={key} className="level-action">
               <label className="bullet">{action.cost === 0 ? '»' : action.cost}</label>
-              {action.description}
+              <ParseReferences parseable={action.description} />
             </li>
           );
         })}
