@@ -1,15 +1,15 @@
-.perk-view {
+.complex-entity-view {
     width: 100%;
     height: 100%;
     padding: 1rem;
     overflow-y: scroll;
 }
 
-.perk-view-header {
+.complex-entity-view-header {
     width: 100%;
 }
 
-.perk-view-levels {
+.complex-entity-view-levels {
     margin-top: 1rem;
     display: grid;
     grid-gap: 1rem;
@@ -28,6 +28,6 @@
     }
 }
 
-.perk-view-level {
+.complex-entity-view-level {
     box-sizing: border-box;
 }

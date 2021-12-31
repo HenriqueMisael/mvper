@@ -1,7 +1,7 @@
 {
     "title": "Perícias",
     "level": "Nível {{level}}",
-    "details": [
+    "introduction": [
         "Perícias são conhecimentos específicos dos personagens que envolvem manobras e seus níveis são parâmetros para o grau de influência. Então se um Personagem já consegue desarmar armadilhas usando Operar mecanismos, logo isso não o impede e armá-la de novamente, entretanto não será verdade em certas situações, como pode ser observado na Perícias Sobrevivência que mesmo capaz de fazer fogueiras não se poderá apagar incêndios.",
         "Cada perícia possui níveis de 1º a 5º, cada nível libera uma manobra, podendo ser executada durante os turnos dos oponentes, porem apenas 1 por rod. Cada nível possuindo Funções (») com seu custo por ½ Pd, expressos na ficha por um traço [ I ] e dois usos por um \"x\" [ X ]. Perícias com dois custos, deverá ser decidido qual das opções adotar na hora que usar a perícia. Além d'isso, algumas perícias trazem custo adiciona de A/a para adicionar mais efeitos ao uso da perícia, de [1] a [3].",
         "As perícias possuem o “Somente” que é um requisito adicionais de RolePlayer, além das já trazidas pelas próprias perícias ou situação para se utilizar da manobra da perícia.",
