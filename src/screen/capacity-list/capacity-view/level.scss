@@ -1,0 +1,12 @@
+ul.level-actions {
+    list-style: none;
+}
+
+li.level-action {
+    text-indent: -1em;
+}
+
+li > .bullet {
+    padding-right: 8px;
+    margin-left: -1px;
+}

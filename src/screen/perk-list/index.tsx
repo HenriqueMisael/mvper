@@ -11,13 +11,7 @@ const PerkListScreen = () => {
   const perks = useSelector(selectors.core.getPerks);
 
   return (
-    <ComplexEntityList
-      items={perks}
-      selected={perkID}
-      textRenderer={(perk) => perk.name}
-      entityView={PerkView}
-      name="perk"
-    />
+    <ComplexEntityList items={perks} selected={perkID} entityView={PerkView} name="perk" />
   );
 };
 

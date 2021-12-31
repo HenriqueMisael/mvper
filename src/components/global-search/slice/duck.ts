@@ -1,6 +1,7 @@
 import { t } from 'i18next';
 import { Perk } from '../../../common/model/perk';
 import { Talent } from '../../../common/model/talent';
+import { Capacity } from '../../../common/model/capacity';
 
 export abstract class GlobalSearchOption {
   public readonly tags: string[];
@@ -33,6 +34,12 @@ export class PerkSearchOption extends GlobalSearchOption {
 export class TalentSearchOption extends GlobalSearchOption {
   constructor(talent: Talent) {
     super(t('talent-list:title'), talent.name, `/talent#${talent.id}`);
+  }
+}
+
+export class CapacitySearchOption extends GlobalSearchOption {
+  constructor(capacity: Capacity) {
+    super(t('capacity-list:title'), capacity.name, `/capacity/${capacity.id}`);
   }
 }
 

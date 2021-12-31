@@ -10,6 +10,7 @@ import HomeScreen from './screen/home';
 import PerkListScreen from './screen/perk-list';
 import TalentListScreen from './screen/talent-list';
 import './App.scss';
+import CapacityListScreen from './screen/capacity-list';
 
 function App() {
   const themeClassName = useSelector((state) => {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/perk" element={<PerkListScreen />} />
           <Route path="/perk/:perkID" element={<PerkListScreen />} />
+          <Route path="/capacity" element={<CapacityListScreen />} />
+          <Route path="/capacity/:capacityID" element={<CapacityListScreen />} />
           <Route path="/talent" element={<TalentListScreen />} />
         </Routes>
       </div>

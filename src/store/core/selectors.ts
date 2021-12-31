@@ -15,6 +15,10 @@ export const getTalentByTalentID = createSelector([getRoot], (state) => {
   return state.talent;
 });
 
+export const getCapacityByCapacityID = createSelector([getRoot], (state) => {
+  return state.capacity;
+});
+
 export const getPerks = createSelector([getPerkByPerkID], (perkByPerkID) => {
   return Object.values(perkByPerkID);
 });
@@ -22,3 +26,10 @@ export const getPerks = createSelector([getPerkByPerkID], (perkByPerkID) => {
 export const getTalents = createSelector([getTalentByTalentID], (talentByTalentID) => {
   return Object.values(talentByTalentID);
 });
+
+export const getCapacities = createSelector(
+  [getCapacityByCapacityID],
+  (capacityByCapacityID) => {
+    return Object.values(capacityByCapacityID);
+  },
+);
