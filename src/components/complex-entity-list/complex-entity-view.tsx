@@ -4,13 +4,8 @@ import { Card, H3 } from '@blueprintjs/core';
 
 import { EntityViewProps } from './index';
 import './complex-entity-view.scss';
+import { ComplexEntity } from '../../common/model/complex-entity';
 
-interface ComplexEntity<K, L> {
-  id: K;
-  name: string;
-  detail: string[];
-  levels: L[];
-}
 interface ComplexEntityViewProps<K, L>
   extends PropsWithChildren<EntityViewProps<ComplexEntity<K, L>>> {
   levelComponent: React.FunctionComponent<{ index: number; level: L }>;
