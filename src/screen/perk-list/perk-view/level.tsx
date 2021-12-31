@@ -9,7 +9,7 @@ export function Level(props: { level: PerkLevel; index: number }) {
   const { level, index } = props;
   const title = `${t('perk-list:level', { level: index + 1 })}: ${level.name}`;
   return (
-    <Card className="perk-view-level">
+    <Card>
       <header>
         <H4>{title}</H4>
       </header>

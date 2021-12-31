@@ -1,10 +1,12 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Capacity, CapacityID, importCapacities } from '../../common/model/capacity';
 import { importPerks, Perk, PerkID } from '../../common/model/perk';
 import { importTalents, Talent, TalentID } from '../../common/model/talent';
 
 interface CoreState {
   perk: { [k: PerkID]: Perk };
   talent: { [k: TalentID]: Talent };
+  capacity: { [k: CapacityID]: Capacity };
   fetching: 'idle' | 'pending';
   error: string;
 }
@@ -12,6 +14,7 @@ interface CoreState {
 const initialState: CoreState = {
   perk: {},
   talent: {},
+  capacity: {},
   fetching: 'idle',
   error: '',
 };
@@ -19,18 +22,26 @@ const initialState: CoreState = {
 export const fetchInitialData = createAsyncThunk('core/fetchInitialData', async () => {
   const perksJson = await importPerks();
   const talentsJson = await importTalents();
-  return { perksJson, talentsJson };
+  const capacitiesJson = await importCapacities();
+  return { perksJson, talentsJson, capacitiesJson };
 });
 
 let fetchInitialDataFulfilled = (
   state: CoreState,
-  action: PayloadAction<{ perksJson: Perk[]; talentsJson: Talent[] }>,
+  action: PayloadAction<{
+    perksJson: Perk[];
+    talentsJson: Talent[];
+    capacitiesJson: Capacity[];
+  }>,
 ) => {
   action.payload.perksJson.forEach((perk) => {
     state.perk[perk.id] = perk;
   });
   action.payload.talentsJson.forEach((talent) => {
     state.talent[talent.id] = talent;
+  });
+  action.payload.capacitiesJson.forEach((capacity) => {
+    state.capacity[capacity.id] = capacity;
   });
   state.fetching = 'idle';
 };
@@ -45,7 +56,7 @@ export default createSlice({
     builder
       .addCase(fetchInitialData.fulfilled, fetchInitialDataFulfilled)
       .addCase(fetchInitialData.pending, fetchInitialDataPending)
-      .addCase(fetchInitialData.rejected, function (state, action) {
+      .addCase(fetchInitialData.rejected, function (state) {
         state.fetching = 'idle';
         state.error = 'error';
       }),

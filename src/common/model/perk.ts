@@ -1,3 +1,5 @@
+import { ComplexEntity } from './complex-entity';
+
 export interface PerkAction {
   cost: number;
   description: string;
@@ -11,12 +13,7 @@ export interface PerkLevel {
 }
 
 export type PerkID = string;
-
-export interface Perk {
-  id: PerkID;
-  name: string;
-  detail: string[];
-  levels: PerkLevel[];
+export interface Perk extends ComplexEntity<PerkID, PerkLevel> {
   condition: string;
 }
 
