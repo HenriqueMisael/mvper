@@ -4,10 +4,15 @@ import './index.scss';
 
 interface FlexibleGridProps {
   items: ReactNode[];
-  placeholders: [number, number][];
+  size: 'pt' | 'sm' | 'md' | 'lg';
 }
-
-const FlexibleGrid = ({ items, placeholders }: FlexibleGridProps) => {
+const sizes = {
+  pt: 256, //16rem
+  sm: 320, //20rem
+  md: 384, //24rem
+  lg: 512, //32rem
+};
+const FlexibleGrid = ({ items, size }: FlexibleGridProps) => {
   const [columns, setColumns] = useState([items]);
   const [columnCount, setColumnCount] = useState(0);
 
@@ -27,10 +32,9 @@ const FlexibleGrid = ({ items, placeholders }: FlexibleGridProps) => {
     const handleResize = () => {
       if (timeout != null) window.clearTimeout(timeout);
       timeout = window.setTimeout(() => {
-        const columnCount = placeholders.reduce(
-          (acc, [maxWidth, columnCount]) => (maxWidth < window.innerWidth ? columnCount : acc),
-          2,
-        );
+        const targetColumnWidth = sizes[size];
+        const columnCount = Math.floor(window.innerWidth / targetColumnWidth);
+        console.log({ targetColumnWidth, achieved: window.innerWidth / columnCount });
         setColumnCount(columnCount);
       }, 64);
     };

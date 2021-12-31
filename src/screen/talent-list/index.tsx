@@ -14,15 +14,7 @@ const TalentList = () => {
 
   return (
     <div className={'screen-root'}>
-      <FlexibleGrid
-        items={items}
-        placeholders={[
-          [1025, 3],
-          [1201, 4],
-          [1441, 5],
-          [1921, 7],
-        ]}
-      />
+      <FlexibleGrid items={items} size="sm" />
     </div>
   );
 };
