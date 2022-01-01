@@ -92,7 +92,7 @@
                     },
                     {
                         "cost": 0,
-                        "description": "Adquira {{action:Aa$1}} para desferir um ataque de oportunidade"
+                        "description": "Adquira {{action:Aa$1}} para desferir um {{maneuver:opportunityAttack}}"
                     }
                 ]
             },
@@ -101,11 +101,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Receba um {{onus:circunstância$1}} na {{aux:Eq}} durante {{time:rod$1}} e um bônus de {{bon:circunstância$2}} naquele ataque."
+                        "description": "Receba um {{onus:context$1}} na {{aux:Eq}} durante {{time:rod$1}} e um {{bon:context$2}} naquele ataque."
                     },
                     {
                         "cost": 2,
-                        "description": "Receba um {{onus:circunstância$2}} na {{aux:Eq}} durante {{time:rod$1}} e um bônus de {{bon:circunstância$3}} naquele ataque."
+                        "description": "Receba um {{onus:context$2}} na {{aux:Eq}} durante {{time:rod$1}} e um {{bon:context$3}} naquele ataque."
                     }
                 ]
             },
@@ -114,11 +114,11 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Receba um {{bon:circunstância$1}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:circunstância$2}} naquele ataque."
+                        "description": "Receba um {{bon:context$1}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:context$2}} naquele ataque."
                     },
                     {
                         "cost": 2,
-                        "description": "Receba um {{bon:circunstância$2}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:circunstância$3}} naquele ataque."
+                        "description": "Receba um {{bon:context$2}} na {{aux:Eq}} durante {{time:rod$1}} e um {{onus:context$3}} naquele ataque."
                     }
                 ]
             },
@@ -131,7 +131,7 @@
                     },
                     {
                         "cost": 0,
-                        "description": "Adicione um {{bonus:circunstância}} de {{dice:1d6}} de {{aux:fort}} do aliado, em queda, que for amparado por você."
+                        "description": "Adicione um {{bon:context}} de {{dice:1d6}} de {{base:Fort}} do aliado, em queda, que for amparado por você."
                     }
                 ]
             },
@@ -142,7 +142,7 @@
                 "actions": [
                     {
                         "cost": 0,
-                        "description": "Corra no teto ou até sobre a baforada de um dragão. Receba um {{bonus:ability$2}} naquele {{base:Eq}}"
+                        "description": "Corra no teto ou até sobre a baforada de um dragão. Receba um {{bon:ability$2}} naquele {{base:Eq}}"
                     }
                 ]
             }

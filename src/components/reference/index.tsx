@@ -4,8 +4,13 @@ import TalentReference from './talent-reference';
 import UnknownReference from './unknown-reference';
 import CapacityReference from './capacity-reference';
 import ActionReference from './action-reference';
+import OnusReference from './onus-reference';
+import ManeuverReference from './maneuver-reference';
+import AuxiliaryReference from './auxiliary-reference';
+import BonusReference from './bonus-reference';
+import TimeReference from './time-reference';
 
-interface ReferenceComponentProps {
+export interface ReferenceComponentProps {
   name: string;
 }
 export type ReferenceComponent = (props: ReferenceComponentProps) => ReactElement;
@@ -13,6 +18,11 @@ const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   talent: TalentReference,
   cap: CapacityReference,
   action: ActionReference,
+  onus: OnusReference,
+  bon: BonusReference,
+  maneuver: ManeuverReference,
+  aux: AuxiliaryReference,
+  time: TimeReference,
 };
 
 interface ParseReferencesProps {
