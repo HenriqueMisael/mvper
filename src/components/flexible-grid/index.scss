@@ -1,0 +1,19 @@
+.flexible-grid-root {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.flexible-grid-column {
+    display: grid;
+    grid-gap: 1rem;
+    grid-auto-rows: max-content;
+
+    flex: 1;
+
+    .flexible-grid-root > &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}

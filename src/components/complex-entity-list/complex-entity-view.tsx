@@ -1,10 +1,11 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import classNames from 'classnames';
 import { Card, H3 } from '@blueprintjs/core';
 
 import { EntityViewProps } from './index';
 import './complex-entity-view.scss';
 import { ComplexEntity } from '../../common/model/complex-entity';
+import FlexibleGrid from '../flexible-grid';
 
 interface ComplexEntityViewProps<K, L>
   extends PropsWithChildren<EntityViewProps<ComplexEntity<K, L>>> {
@@ -16,6 +17,15 @@ const ComplexEntityView = <K extends string, L extends object>(
 ) => {
   const { entity, children } = props;
   const LevelComponent = props.levelComponent;
+
+  const items: ReactNode[] = entity.levels.map((level, i) => {
+    const key = `${entity.id}-${i}`;
+    return <LevelComponent key={key} index={i} level={level} />;
+  });
+  if (children) {
+    items.push(children);
+  }
+
   return (
     <section className={classNames('complex-entity-view')}>
       <header className="complex-entity-view-header">
@@ -26,13 +36,7 @@ const ComplexEntityView = <K extends string, L extends object>(
           ))}
         </Card>
       </header>
-      <div className="complex-entity-view-levels">
-        {entity.levels.map((level, i) => {
-          const key = `${entity.id}-${i}`;
-          return <LevelComponent key={key} index={i} level={level} />;
-        })}
-        {children}
-      </div>
+      <FlexibleGrid items={items} size="pt" />
     </section>
   );
 };
