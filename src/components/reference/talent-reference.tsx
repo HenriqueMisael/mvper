@@ -7,9 +7,9 @@ import { TalentPreRequirement } from '../talent/talent-pre-requirement';
 import { TalentDescription } from '../talent/talent-description';
 
 import ReferencePopover from './reference-popover';
-import { ReferenceComponentProps } from './index';
+import { ReferenceComponent } from './index';
 
-const TalentReference = ({ name }: ReferenceComponentProps) => {
+const TalentReference: ReferenceComponent = ({ name }) => {
   const talent = useSelector((state) =>
     selectors.core.getTalents(state).find((talent) => talent.name === name),
   );

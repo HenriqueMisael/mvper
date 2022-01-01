@@ -3,14 +3,16 @@ import { ReactElement } from 'react';
 import TalentReference from './talent-reference';
 import UnknownReference from './unknown-reference';
 import CapacityReference from './capacity-reference';
+import ActionReference from './action-reference';
 
-export interface ReferenceComponentProps {
+interface ReferenceComponentProps {
   name: string;
 }
-type ReferenceComponent = (props: ReferenceComponentProps) => ReactElement;
+export type ReferenceComponent = (props: ReferenceComponentProps) => ReactElement;
 const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   talent: TalentReference,
   cap: CapacityReference,
+  action: ActionReference,
 };
 
 interface ParseReferencesProps {
@@ -31,10 +33,10 @@ export const ParseReferences = (props: ParseReferencesProps) => {
     remaining = remaining.substring(endIndex + 2);
 
     const [entity, name] = group.split(':');
-    const Component: ReferenceComponent = referenceTypes[entity] ?? UnknownReference;
+    const Component: ReferenceComponent = referenceTypes[entity];
 
     groups.push(before);
-    groups.push(<Component name={name} />);
+    groups.push(Component ? <Component name={name} /> : <UnknownReference group={group} />);
     startIndex = remaining.indexOf('{{');
   }
 

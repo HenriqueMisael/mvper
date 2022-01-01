@@ -5,9 +5,9 @@ import { selectors, useSelector } from '../../store';
 import { ComplexEntityHeader } from '../complex-entity/complex-entity-header';
 
 import ReferencePopover from './reference-popover';
-import { ReferenceComponentProps } from './index';
+import { ReferenceComponent } from './index';
 
-const CapacityReference = ({ name }: ReferenceComponentProps) => {
+const CapacityReference: ReferenceComponent = ({ name }) => {
   const [id, value] = name.split('$');
   const capacity = useSelector((state) => selectors.core.getCapacityByCapacityID(state)[id]);
 
