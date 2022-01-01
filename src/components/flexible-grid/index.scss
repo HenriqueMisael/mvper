@@ -1,8 +1,7 @@
 .flexible-grid-root {
     width: 100%;
-    height: 100%;
     display: flex;
-    overflow-y: scroll;
+    overflow: auto;
     justify-content: space-evenly;
     padding: 1rem 0;
 }
@@ -14,8 +13,7 @@
 
     flex: 1;
 
-    margin-right: 1rem;
-    .flexible-grid-root > &:first-child {
-        margin-left: 1rem;
+    .flexible-grid-root > &:not(:last-child) {
+        margin-right: 1rem;
     }
 }

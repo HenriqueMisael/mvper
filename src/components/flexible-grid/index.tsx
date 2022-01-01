@@ -1,6 +1,7 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 
 import './index.scss';
+import { distribute } from '../../common/util';
 
 interface FlexibleGridProps {
   items: ReactNode[];
@@ -17,14 +18,7 @@ const FlexibleGrid = ({ items, size }: FlexibleGridProps) => {
   const [columnCount, setColumnCount] = useState(0);
 
   useEffect(() => {
-    const offset = Math.ceil(items.length / columnCount);
-    const columns = [];
-    for (let i = 0; i < columnCount; i++) {
-      const start = offset * i;
-      const end = offset * (i + 1);
-      columns.push(items.slice(start, end));
-    }
-    setColumns(columns.filter((column) => column.length > 0));
+    setColumns(distribute(items, columnCount));
   }, [items, columnCount, setColumns]);
 
   useEffect(() => {

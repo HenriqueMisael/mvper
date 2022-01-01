@@ -14,7 +14,9 @@ const TalentList = () => {
 
   return (
     <div className={'screen-root'}>
-      <FlexibleGrid items={items} size="sm" />
+      <div className="talents-view">
+        <FlexibleGrid items={items} size="sm" />
+      </div>
     </div>
   );
 };
