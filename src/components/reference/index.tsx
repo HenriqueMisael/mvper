@@ -9,6 +9,7 @@ import ManeuverReference from './maneuver-reference';
 import AuxiliaryReference from './auxiliary-reference';
 import BonusReference from './bonus-reference';
 import TimeReference from './time-reference';
+import DiceReference from './dice-reference';
 
 export interface ReferenceComponentProps {
   name: string;
@@ -23,6 +24,7 @@ const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   maneuver: ManeuverReference,
   aux: AuxiliaryReference,
   time: TimeReference,
+  dice: DiceReference,
 };
 
 interface ParseReferencesProps {
@@ -49,6 +51,7 @@ export const ParseReferences = (props: ParseReferencesProps) => {
     groups.push(Component ? <Component name={name} /> : <UnknownReference group={group} />);
     startIndex = remaining.indexOf('{{');
   }
+  if (remaining) groups.push(remaining);
 
   return <>{groups}</>;
 };

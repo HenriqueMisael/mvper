@@ -78,5 +78,13 @@
                 ]
             }
         }
+    },
+    "dice": {
+        "title": "{{count}} dado de {{faceCount}} faces",
+        "title_plural": "{{count}} dados de {{faceCount}} faces",
+        "title_undefined": "Dados de {{faceCount}} faces",
+        "detail": [
+            "Dados são utilizados para definir probabilidade de sucesso em diversas circunstâncias no jogo, em que a habilidade do personagem não depende totalmente de suas capacitações (embora estas influenciem através de bônus fixos)."
+        ]
     }
 }
