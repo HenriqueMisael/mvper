@@ -134,5 +134,8 @@
         "detail": [
             "Dados são utilizados para definir probabilidade de sucesso em diversas circunstâncias no jogo, em que a habilidade do personagem não depende totalmente de suas capacitações (embora estas influenciem através de bônus fixos)."
         ]
+    },
+    "perk": {
+        "notFound": "Perícia não encontrada: {{notFound}}."
     }
 }

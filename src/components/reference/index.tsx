@@ -12,6 +12,7 @@ import TimeReference from './time-reference';
 import DiceReference from './dice-reference';
 import BaseTestReference from './base-test-reference';
 import VitalityReference from './vit-reference';
+import Index from './perk-reference';
 
 export interface ReferenceComponentProps {
   name: string;
@@ -20,6 +21,7 @@ export type ReferenceComponent = (props: ReferenceComponentProps) => ReactElemen
 const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   talent: TalentReference,
   cap: CapacityReference,
+  perk: Index,
   action: ActionReference,
   onus: OnusReference,
   bon: BonusReference,
