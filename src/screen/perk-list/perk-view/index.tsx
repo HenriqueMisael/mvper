@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { EntityView } from '../../../components/complex-entity-list';
+import { EntityView } from '../../../components/complex-entity/complex-entity-list';
 import { Perk } from '../../../common/model/perk';
-import ComplexEntityView from '../../../components/complex-entity-list/complex-entity-view';
+import ComplexEntityView from '../../../components/complex-entity/complex-entity-view';
 
 import { Level } from './level';
 import { Condition } from './condition';

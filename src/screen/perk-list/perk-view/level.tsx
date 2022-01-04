@@ -1,9 +1,11 @@
-import { Card, H4, Label, UL } from '@blueprintjs/core';
+import { Card, H4, Label } from '@blueprintjs/core';
 import { t } from 'i18next';
 
 import { PerkLevel } from '../../../common/model/perk';
+import { ParseReferences } from '../../../components/reference';
 
 import './level.scss';
+import { PerkLevelActions } from './perk-level-actions';
 
 export function Level(props: { level: PerkLevel; index: number }) {
   const { level, index } = props;
@@ -23,21 +25,11 @@ export function Level(props: { level: PerkLevel; index: number }) {
       {level.requirement && (
         <Label>
           <i>
-            {t('common:requirement')}: {level.requirement}
+            {t('common:requirement')}: <ParseReferences parseable={level.requirement} />
           </i>
         </Label>
       )}
-      <UL className="level-actions">
-        {level.actions.map((action, i) => {
-          const key = `${level.name}-${i}`;
-          return (
-            <li key={key} className="level-action">
-              <label className="bullet">{action.cost === 0 ? '»' : action.cost}</label>
-              {action.description}
-            </li>
-          );
-        })}
-      </UL>
+      <PerkLevelActions level={level} />
     </Card>
   );
 }

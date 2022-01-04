@@ -1,39 +1,25 @@
-import { Card, H4, Label, UL } from '@blueprintjs/core';
-import { t } from 'i18next';
 import React from 'react';
+import { Card } from '@blueprintjs/core';
+
+import { TalentHeader } from '../../components/talent/talent-header';
+import { TalentPreRequirement } from '../../components/talent/talent-pre-requirement';
+import { TalentDescription } from '../../components/talent/talent-description';
+import { TalentRanks } from '../../components/talent/talent-ranks';
 import { Talent } from '../../common/model/talent';
 
 interface TalentCardProps {
   talent: Talent;
 }
 
-export function TalentCard({
-  talent: { description, name, preRequirement, ranks },
-}: TalentCardProps) {
+export function TalentCard({ talent }: TalentCardProps) {
   return (
     <Card className="talent-card">
-      <header>
-        <H4>{name}</H4>
-      </header>
-      {preRequirement && (
-        <Label>
-          <i>
-            {t('common:preRequirement')}: {preRequirement}
-          </i>
-        </Label>
-      )}
-      <p>{description}</p>
-      <UL className="talent-ranks">
-        {ranks.map((talentRank) => {
-          const key = `${name}-${talentRank.rank}`;
-          return (
-            <li key={key} className="talent-rank">
-              <label className="bullet">{talentRank.rank}</label>
-              {talentRank.description}
-            </li>
-          );
-        })}
-      </UL>
+      <section>
+        <TalentHeader talent={talent} />
+        <TalentPreRequirement talent={talent} />
+        <TalentDescription talent={talent} />
+        <TalentRanks talent={talent} />
+      </section>
     </Card>
   );
 }

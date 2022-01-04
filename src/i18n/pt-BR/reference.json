@@ -1,0 +1,174 @@
+{
+    "simple": {
+        "action": {
+            "Dl": {
+                "title": "Deslocamento",
+                "label": "Dl",
+                "detail": ["Gaste 1 Dl para se movimentar por 1 célula no tabuleiro."]
+            },
+            "Aa": {
+                "title": "Ataques por ação",
+                "label": "A/a",
+                "detail": [
+                    "Todo Pj é limitado a executar durante uma Rodada (rod) de jogo um número de Ações Padrões, definindo assim sua velocidade na execução de tais ações. Esse valor é dividido em: Ataques por Ação (A/a), Movimento (Mov) e Ação Rápida. Ao declarar um ataque executado pelo Pj aos oponentes em sua Área de Ameaça, consumindo seus A/a’s.",
+                    "A/a = ½ Des + 1"
+                ]
+            },
+            "mov": {
+                "title": "Movimento",
+                "label": "Mov",
+                "detail": ["Utilizado para movimentar o personagem pelo tabuleiro utilizando Dls."]
+            }
+        },
+        "onus": {
+            "context": {
+                "label": "ônus de circunstância",
+                "detail": [
+                    "Um valor a ser deduzido de uma rolagem.",
+                    "Caso mais de um ônus de circunstância esteja ativo, eles não acumulam: valerá o de maior módulo).",
+                    "Ex.: Um ônus 2 de circunstância e outro 1, válidos para a mesma rolagem; apenas -2 será aplicado."
+                ]
+            },
+            "ability": {
+                "label": "ônus de competência",
+                "detail": [
+                    "Um valor a ser deduzido de uma rolagem.",
+                    "Caso mais de um ônus de competência esteja ativo, eles não acumulam: valerá o de maior módulo).",
+                    "Ex.: Um ônus 2 de competência e outro 1, válidos para a mesma rolagem; apenas -2 será aplicado."
+                ]
+            }
+        },
+        "bonus": {
+            "context": {
+                "label": "bônus de circunstância",
+                "detail": [
+                    "Um valor a ser adicionado a uma rolagem.",
+                    "Caso mais de um bônus de circunstância esteja ativo, eles não acumulam: valerá o de maior módulo).",
+                    "Ex.: Um bônus 2 de circunstância e outro 1, válidos para a mesma rolagem; apenas +2 será aplicado."
+                ]
+            },
+            "ability": {
+                "label": "bônus de competência",
+                "detail": [
+                    "Um valor a ser adicionado a uma rolagem.",
+                    "Caso mais de um bônus de competência esteja ativo, eles não acumulam: valerá o de maior módulo).",
+                    "Ex.: Um bônus 2 de competência e outro 1, válidos para a mesma rolagem; apenas +2 será aplicado."
+                ]
+            }
+        },
+        "maneuver": {
+            "opportunityAttack": {
+                "label": "ataque de oportunidade",
+                "detail": [
+                    "Várias situações provocaram ataques de oportunidade, a mais comum é entrar em sua área ameaçada gerando uma oportunidade para desferir esse tipo de manobra consume A/a’s conforme a arma utilizada. Sair da área ameaçada não provoca ataque de oportunidade, apenas entrar."
+                ]
+            }
+        },
+        "aux": {
+            "Eq": {
+                "title": "Esquiva",
+                "label": "Eq",
+                "detail": [
+                    "O valor de Esquiva (Eq) é passivo, ou seja, não será rolado dados.",
+                    "Eq = Des + 9 + Redutor por Peso de Armaduras e Escudos (Rp) + Vitalidade (Vit)",
+                    "O resultado da rolagem de Atk terá que ser igual ou maior que a Eq do alvo. Caso o alvo não seja móvel ou fique parado será considerado Eq: 1d6.",
+                    "Caso o Pj seja bem sucedido n'uma Esquiva, ele poderá, uma única vez n’aquela Fase de combate, escolher mover o seu Pj a 1 Dl."
+                ]
+            },
+            "D": {
+                "title": "Dano",
+                "label": "D",
+                "detail": [
+                    "Quando o Pj é acertado, ele poderá receber um valor de Dano (D) que é sofrido aos seus Pontos de Vida (Pv).",
+                    "Dano (D) = Dano da Arma + Diferença do Ataque para a Reação (Atk - Reação) + Vit",
+                    "Em AC esse valor será somado +Stm, já no AD não será somado, exceto quando esse ataque for por Arremesso, somando +½ Stm. Alguns tipos de dano são definidos por rolagens de dados, como por fogo, explosões e ácido."
+                ]
+            },
+            "atk": {
+                "title": "Ataque",
+                "label": "Atk",
+                "detail": [
+                    "Ataque é um valor adicionado a uma rolagem 2d6 para verificar se um personagem obteve sucesso ao atacar um alvo.",
+                    "Ataques à Corpo (AC) é justamente aquele que é desferido quando o Pj utiliza-se d'uma arma que pode acertar o alvo na distancia do Toque, ou em sua área de ameaça, como socos, chifres, espadas, adagas, até um arco e armas de fogo em disparos a queimaroupa e outros. Rolando 2d6 + Des",
+                    "Ataques à Distância (AD) acontecem quando a arma em questão, magia ou qualquer projétil não seja da distancia do Toque, ou além de sua área de ameaça, d'esta forma os arpões arremessados, correntes chicoteadas, ataques com caudas, lanças de longa haste, e armas de disparo usarão do AD para tentar acertar seu alvo. Rolando 2d6 + ½Des"
+                ]
+            }
+        },
+        "base": {
+            "fort": {
+                "title": "Teste de fortitude",
+                "label": "Fort",
+                "detail": [
+                    "Utilizado para testes que envolve a fisiologia do Pj ao ser alvo de venenos, doenças ou quando o Pj quer exercer grandes esforços como andar horas por um deserto, erguer sobre a cabeça uma rocha grande ou até arrancar o braço d’uma criatura na força."
+                ]
+            },
+            "Eq": {
+                "title": "Teste de Esquiva",
+                "label": "Teste de Eq",
+                "detail": [
+                    "Alguns estilos de ataques obrigam Teste de Eq, como: Em Área e Surpresa.",
+                    "O teste de esquiva é feito através de uma rolagem de 1d12 + Des"
+                ]
+            },
+            "stealth": {
+                "label": "furtividade",
+                "detail": [
+                    "A furtividade é uma manobra de parâmetro de Capacidade (½ Des vs. Int).",
+                    "Na Furtividade o Pj se Moverá com metade de seus Deslocamento (½ Dl’s) para que evite ao máximo fazer barulho, sendo exigido apenas ½ do valor de Des em Int para ser percebido.",
+                    "Perícias como Concentração Nível 1 aumentam o bônus vs. Furtividade."
+                ]
+            },
+            "hide": {
+                "label": "oclusão",
+                "detail": [
+                    "Oclusão é uma manobra de parâmetro de Capacidade (½ Car vs. Int).",
+                    "O PJ tenta ficar silencioso para não ser visto ou tenta mudar sua voz e aparência para enganar inimigos.",
+                    "Perícias como Blefar Nível 3 aumentam o bônus vs. Disfarce."
+                ]
+            }
+        },
+        "time": {
+            "rod": {
+                "title": "Rodada",
+                "label": "Rod",
+                "detail": [
+                    "Uma rodada  dada por um conjunto de turnos até o turno inicial. Rodadas são individuais para cada Pj. Uma rodada começa ao final de seu turno e termina ao chegar no final do seu próximo turno. "
+                ]
+            }
+        },
+        "vit": {
+            "PV": {
+                "label": "PV",
+                "title": "Pontos de vida",
+                "detail": [
+                    "A vitalidade do personagem afeta diretamente as ações do personagem, reduzindo todas as rolagens caso esteja negativa.",
+                    "Os pontos de vida se referem à saúde do personagem, e são reduzidos conforme este recebe dano.",
+                    "Pontos de vida aumentam conforme o nível através de rolagens de Fonte de Vital.",
+                    "Podem ser recuperados ao descansar através de Pulso de Vitae, ou em outras circunstâncias através de outras manobras, perícias e habilidades."
+                ]
+            }
+        },
+        "power": {
+            "mana": {
+                "label": "Mn",
+                "title": "Fonte de Poder: Mana",
+                "detail": [
+                    "Ligada a quantidade de Magia que se consegue manipular do ambiente. Diretamente ligada ao meio, a Mana se comporta de maneira peculiar, pois reage conforme o ambiente em que está. Mortos-vivos é uma das criaturas que possui mana.",
+                    "Foco = 1d2+Int",
+                    "Inicial: Cheio a cada anoitecer"
+                ]
+            }
+        }
+    },
+    "dice": {
+        "title": "{{count}} dado de {{faceCount}} faces",
+        "title_plural": "{{count}} dados de {{faceCount}} faces",
+        "title_undefined": "Dados de {{faceCount}} faces",
+        "detail": [
+            "Dados são utilizados para definir probabilidade de sucesso em diversas circunstâncias no jogo, em que a habilidade do personagem não depende totalmente de suas capacitações (embora estas influenciem através de bônus fixos)."
+        ]
+    },
+    "perk": {
+        "notFound": "Perícia não encontrada: {{notFound}}."
+    }
+}

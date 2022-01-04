@@ -18,7 +18,7 @@ export const importCapacities = async () => {
   return parsed.data
     .filter((data: any) => !!data['Name'])
     .map((data: any) => {
-      const id = data['Abbreviation'];
+      const id = data['Abbreviation'].toLowerCase();
       const name = data['Name'];
       const detail = [data['Description']];
       const specializations = data['Specialization'].split(', ');

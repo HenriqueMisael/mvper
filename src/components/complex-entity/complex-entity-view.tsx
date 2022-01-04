@@ -1,11 +1,13 @@
 import React, { PropsWithChildren, ReactNode } from 'react';
+import { Card } from '@blueprintjs/core';
 import classNames from 'classnames';
-import { Card, H3 } from '@blueprintjs/core';
 
-import { EntityViewProps } from './index';
-import './complex-entity-view.scss';
 import { ComplexEntity } from '../../common/model/complex-entity';
 import FlexibleGrid from '../flexible-grid';
+
+import { EntityViewProps } from './complex-entity-list';
+import { ComplexEntityHeader } from './complex-entity-header';
+import './complex-entity-view.scss';
 
 interface ComplexEntityViewProps<K, L>
   extends PropsWithChildren<EntityViewProps<ComplexEntity<K, L>>> {
@@ -30,10 +32,7 @@ const ComplexEntityView = <K extends string, L extends object>(
     <section className={classNames('complex-entity-view')}>
       <header className="complex-entity-view-header">
         <Card>
-          <H3>{entity.name}</H3>
-          {entity.detail.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
+          <ComplexEntityHeader entity={entity} />
         </Card>
       </header>
       <FlexibleGrid items={items} size="pt" />
