@@ -2,10 +2,12 @@
     "simple": {
         "action": {
             "Dl": {
+                "title": "Deslocamento",
                 "label": "Dl",
                 "detail": ["Gaste 1 Dl para se movimentar por 1 célula no tabuleiro."]
             },
             "Aa": {
+                "title": "Ataques por ação",
                 "label": "A/a",
                 "detail": [
                     "Todo Pj é limitado a executar durante uma Rodada (rod) de jogo um número de Ações Padrões, definindo assim sua velocidade na execução de tais ações. Esse valor é dividido em: Ataques por Ação (A/a), Movimento (Mov) e Ação Rápida. Ao declarar um ataque executado pelo Pj aos oponentes em sua Área de Ameaça, consumindo seus A/a’s.",
@@ -51,6 +53,7 @@
         },
         "aux": {
             "Eq": {
+                "title": "Esquiva",
                 "label": "Eq",
                 "detail": [
                     "O valor de Esquiva (Eq) é passivo, ou seja, não será rolado dados.",
@@ -71,12 +74,14 @@
         },
         "base": {
             "fort": {
+                "title": "Teste de fortitude",
                 "label": "Fort",
                 "detail": [
                     "Utilizado para testes que envolve a fisiologia do Pj ao ser alvo de venenos, doenças ou quando o Pj quer exercer grandes esforços como andar horas por um deserto, erguer sobre a cabeça uma rocha grande ou até arrancar o braço d’uma criatura na força."
                 ]
             },
             "Eq": {
+                "title": "Teste de Esquiva",
                 "label": "Teste de Eq",
                 "detail": [
                     "Alguns estilos de ataques obrigam Teste de Eq, como: Em Área e Surpresa.",
@@ -102,9 +107,22 @@
         },
         "time": {
             "rod": {
+                "title": "Rodada",
                 "label": "Rod",
                 "detail": [
                     "Uma rodada  dada por um conjunto de turnos até o turno inicial. Rodadas são individuais para cada Pj. Uma rodada começa ao final de seu turno e termina ao chegar no final do seu próximo turno. "
+                ]
+            }
+        },
+        "vit": {
+            "PV": {
+                "label": "PV",
+                "title": "Pontos de vida",
+                "detail": [
+                    "A vitalidade do personagem afeta diretamente as ações do personagem, reduzindo todas as rolagens caso esteja negativa.",
+                    "Os pontos de vida se referem à saúde do personagem, e são reduzidos conforme este recebe dano.",
+                    "Pontos de vida aumentam conforme o nível através de rolagens de Fonte de Vital.",
+                    "Podem ser recuperados ao descansar através de Pulso de Vitae, ou em outras circunstâncias através de outras manobras, perícias e habilidades."
                 ]
             }
         }

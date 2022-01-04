@@ -11,6 +11,7 @@ import BonusReference from './bonus-reference';
 import TimeReference from './time-reference';
 import DiceReference from './dice-reference';
 import BaseTestReference from './base-test-reference';
+import VitalityReference from './vit-reference';
 
 export interface ReferenceComponentProps {
   name: string;
@@ -26,6 +27,7 @@ const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   aux: AuxiliaryReference,
   time: TimeReference,
   base: BaseTestReference,
+  vit: VitalityReference,
   dice: DiceReference,
 };
 
