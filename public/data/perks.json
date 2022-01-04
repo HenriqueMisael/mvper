@@ -131,7 +131,7 @@
                     },
                     {
                         "cost": 0,
-                        "description": "Adicione um {{bon:context}} de {{dice:1d6}} de {{base:Fort}} do aliado, em queda, que for amparado por você."
+                        "description": "Adicione um {{bon:context}} de {{dice:1d6}} de {{base:fort}} do aliado, em queda, que for amparado por você."
                     }
                 ]
             },

@@ -3,9 +3,7 @@
         "action": {
             "Dl": {
                 "label": "Dl",
-                "detail": [
-                    "Gaste 1 Dl para se movimentar por 1 célula no tabuleiro."
-                ]
+                "detail": ["Gaste 1 Dl para se movimentar por 1 célula no tabuleiro."]
             },
             "Aa": {
                 "label": "A/a",
@@ -60,6 +58,15 @@
                     "O resultado da rolagem de Atk terá que ser igual ou maior que a Eq do alvo. Caso o alvo não seja móvel ou fique parado será considerado Eq: 1d6.",
                     "Caso o Pj seja bem sucedido n'uma Esquiva, ele poderá, uma única vez n’aquela Fase de combate, escolher mover o seu Pj a 1 Dl."
                 ]
+            },
+            "D": {
+                "title": "Dano",
+                "label": "D",
+                "detail": [
+                    "Quando o Pj é acertado, ele poderá receber um valor de Dano (D) que é sofrido aos seus Pontos de Vida (Pv).",
+                    "Dano (D) = Dano da Arma + Diferença do Ataque para a Reação (Atk - Reação) + Vit",
+                    "Em AC esse valor será somado +Stm, já no AD não será somado, exceto quando esse ataque for por Arremesso, somando +½ Stm. Alguns tipos de dano são definidos por rolagens de dados, como por fogo, explosões e ácido."
+                ]
             }
         },
         "base": {
@@ -67,6 +74,29 @@
                 "label": "Fort",
                 "detail": [
                     "Utilizado para testes que envolve a fisiologia do Pj ao ser alvo de venenos, doenças ou quando o Pj quer exercer grandes esforços como andar horas por um deserto, erguer sobre a cabeça uma rocha grande ou até arrancar o braço d’uma criatura na força."
+                ]
+            },
+            "Eq": {
+                "label": "Teste de Eq",
+                "detail": [
+                    "Alguns estilos de ataques obrigam Teste de Eq, como: Em Área e Surpresa.",
+                    "O teste de esquiva é feito através de uma rolagem de 1d12 + Des"
+                ]
+            },
+            "stealth": {
+                "label": "furtividade",
+                "detail": [
+                    "A furtividade é uma manobra de parâmetro de Capacidade (½ Des vs. Int).",
+                    "Na Furtividade o Pj se Moverá com metade de seus Deslocamento (½ Dl’s) para que evite ao máximo fazer barulho, sendo exigido apenas ½ do valor de Des em Int para ser percebido.",
+                    "Perícias como Concentração Nível 1 aumentam o bônus vs. Furtividade."
+                ]
+            },
+            "hide": {
+                "label": "oclusão",
+                "detail": [
+                    "Oclusão é uma manobra de parâmetro de Capacidade (½ Car vs. Int).",
+                    "O PJ tenta ficar silencioso para não ser visto ou tenta mudar sua voz e aparência para enganar inimigos.",
+                    "Perícias como Blefar Nível 3 aumentam o bônus vs. Disfarce."
                 ]
             }
         },
