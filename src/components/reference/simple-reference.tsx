@@ -9,9 +9,14 @@ import { H4 } from '@blueprintjs/core';
 const SimpleReference = (props: ReferenceComponentProps & { context: string }) => {
   const [name, amount] = props.name.split('$');
   const translatePrefix = `reference:simple.${props.context}.${name}`;
+
+  const label = t(`${translatePrefix}.label`);
+  if (!label) return <UnknownReference group={`${name}:${props.name}`} />;
+
   const hasTitle = exists(`${translatePrefix}.title`);
   const detail = t<string[]>(`${translatePrefix}.detail`);
 
+  const text = (amount ? `${amount} ` : '') + label;
   const content = (
     <section>
       {hasTitle && (
@@ -24,9 +29,6 @@ const SimpleReference = (props: ReferenceComponentProps & { context: string }) =
       ))}
     </section>
   );
-  const label = t(`${translatePrefix}.label`);
-  if (!label) return <UnknownReference group={`${name}:${props.name}`} />;
-  const text = (amount ? `${amount} ` : '') + label;
   return <ReferencePopover content={content} text={text} />;
 };
 

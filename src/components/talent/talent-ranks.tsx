@@ -2,6 +2,7 @@ import { Talent } from '../../common/model/talent';
 import { UL } from '@blueprintjs/core';
 import classNames from 'classnames';
 import React from 'react';
+import { ParseReferences } from '../reference';
 
 export const TalentRanks = (props: { talent: Talent }) => {
   const { talent } = props;
@@ -15,7 +16,7 @@ export const TalentRanks = (props: { talent: Talent }) => {
             className={classNames('talent-rank', `rank-${talentRank.rank.toLowerCase()}`)}
           >
             <label className="bullet">{talentRank.rank}</label>
-            {talentRank.description}
+            <ParseReferences parseable={talentRank.description} />
           </li>
         );
       })}

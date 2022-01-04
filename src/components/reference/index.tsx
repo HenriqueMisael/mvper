@@ -13,6 +13,7 @@ import DiceReference from './dice-reference';
 import BaseTestReference from './base-test-reference';
 import VitalityReference from './vit-reference';
 import Index from './perk-reference';
+import PowerSourceReference from './power-source-reference';
 
 export interface ReferenceComponentProps {
   name: string;
@@ -30,6 +31,7 @@ const referenceTypes: { [referenceType: string]: ReferenceComponent } = {
   time: TimeReference,
   base: BaseTestReference,
   vit: VitalityReference,
+  power: PowerSourceReference,
   dice: DiceReference,
 };
 
