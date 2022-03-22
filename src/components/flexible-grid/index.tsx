@@ -1,12 +1,15 @@
 import React, { ReactNode, useRef } from 'react';
 
+import { WeightedItem } from '../../common/util';
+
 import './index.scss';
 import { FlexibleGridSize, useFlexibleGrid } from './hooks';
 
 interface FlexibleGridProps {
-  items: ReactNode[];
+  items: WeightedItem<ReactNode>[];
   size: FlexibleGridSize;
 }
+
 const FlexibleGrid = ({ items, size }: FlexibleGridProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const columns = useFlexibleGrid({ items, size, ref });
