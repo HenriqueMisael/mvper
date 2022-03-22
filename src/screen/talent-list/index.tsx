@@ -10,7 +10,25 @@ const TalentList = () => {
   const talents = useSelector((state) => {
     return selectors.core.getTalents(state);
   });
-  const items = talents.map((talent) => <TalentCard key={talent.id} talent={talent} />);
+  const items = talents.map((talent) => {
+    const titleSize = 2;
+    const descriptionSize = Math.floor(talent.description.length / 32);
+    const preRequirementSize = talent.preRequirement
+      ? Math.floor(talent.preRequirement.length / 32)
+      : 0;
+    const ranksCount = talent.ranks.reduce(
+      (acc, rank) => acc + Math.floor(rank.description.length / 32),
+      0,
+    );
+    const cardSize = ranksCount + titleSize + descriptionSize + preRequirementSize;
+    console.log(talent.name, cardSize);
+    const node = <TalentCard key={talent.id} talent={talent} />;
+
+    return {
+      t: node,
+      weight: cardSize,
+    };
+  });
 
   return (
     <div className={'screen-root'}>

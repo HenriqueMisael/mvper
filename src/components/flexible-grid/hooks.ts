@@ -1,5 +1,6 @@
 import { ReactNode, RefObject, useEffect, useState } from 'react';
-import { distribute } from '../../common/util';
+
+import { distribute, WeightedItem } from '../../common/util';
 
 const sizes = {
   pt: 256, //16rem
@@ -10,13 +11,13 @@ const sizes = {
 export type FlexibleGridSize = 'pt' | 'sm' | 'md' | 'lg';
 
 interface Options {
-  items: ReactNode[];
+  items: WeightedItem<ReactNode>[];
   ref: RefObject<HTMLElement>;
   size: FlexibleGridSize;
 }
 
 export function useFlexibleGrid({ items, ref, size }: Options) {
-  const [columns, setColumns] = useState([items]);
+  const [columns, setColumns] = useState<ReactNode[][]>([]);
   const [columnCount, setColumnCount] = useState(0);
 
   useEffect(() => {
