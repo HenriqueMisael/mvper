@@ -36,6 +36,12 @@
                     "Caso mais de um ônus de competência esteja ativo, eles não acumulam: valerá o de maior módulo).",
                     "Ex.: Um ônus 2 de competência e outro 1, válidos para a mesma rolagem; apenas -2 será aplicado."
                 ]
+            },
+            "rp": {
+                "label": "ônus de RP",
+                "detail": [
+                    "O Redutor por Peso de Armaduras e Escudos afeta as ações daqueles que portam armaduras com as quais não foram treinados para o combate."
+                ]
             }
         },
         "bonus": {
@@ -61,6 +67,13 @@
                 "label": "ataque de oportunidade",
                 "detail": [
                     "Várias situações provocaram ataques de oportunidade, a mais comum é entrar em sua área ameaçada gerando uma oportunidade para desferir esse tipo de manobra consume A/a’s conforme a arma utilizada. Sair da área ameaçada não provoca ataque de oportunidade, apenas entrar."
+                ]
+            },
+            "preventApproximation": {
+                "label": "Impedir Aproximação",
+                "detail": [
+                    "Com uma ataque é capaz de impedir a aproximação de seus adversários. Num {{aux:atk}} vs. {{aux:atk}}, ao atingir o alvo realize um teste de {{base:fort}} vs. {{base:fort}}. Você recebe um bônus de +2 para cada categoria de tamanho superior a do oponente e +1 para cada 5 de {{aux:D}} sofrido, assim forçando o oponente a ser afastado {{cap:Stm}} em Dl's.",
+                    "Essa manobra só poderá ser executada por portadores de Armas Pesadas ou que possuam valores de Stm positivos"
                 ]
             }
         },
@@ -89,8 +102,31 @@
                 "label": "Atk",
                 "detail": [
                     "Ataque é um valor adicionado a uma rolagem 2d6 para verificar se um personagem obteve sucesso ao atacar um alvo.",
-                    "Ataques à Corpo (AC) é justamente aquele que é desferido quando o Pj utiliza-se d'uma arma que pode acertar o alvo na distancia do Toque, ou em sua área de ameaça, como socos, chifres, espadas, adagas, até um arco e armas de fogo em disparos a queimaroupa e outros. Rolando 2d6 + Des",
-                    "Ataques à Distância (AD) acontecem quando a arma em questão, magia ou qualquer projétil não seja da distancia do Toque, ou além de sua área de ameaça, d'esta forma os arpões arremessados, correntes chicoteadas, ataques com caudas, lanças de longa haste, e armas de disparo usarão do AD para tentar acertar seu alvo. Rolando 2d6 + ½Des"
+                    "Ataques a Corpo (AC) é justamente aquele que é desferido quando o Pj utiliza-se d'uma arma que pode acertar o alvo na distancia do Toque, ou em sua área de ameaça, como socos, chifres, espadas, adagas, até um arco e armas de fogo em disparos a queimaroupa e outros. Rolando 2d6 + Des",
+                    "Ataques a Distância (AD) acontecem quando a arma em questão, magia ou qualquer projétil não seja da distancia do Toque, ou além de sua área de ameaça, d'esta forma os arpões arremessados, correntes chicoteadas, ataques com caudas, lanças de longa haste, e armas de disparo usarão do AD para tentar acertar seu alvo. Rolando 2d6 + ½Des"
+                ]
+            },
+            "atkD": {
+                "title": "Ataque a Corpo",
+                "label": "AD",
+                "detail": [
+                    "É justamente aquele que é desferido quando o Pj utiliza-se d'uma arma que pode acertar o alvo na distancia do Toque, ou em sua área de ameaça, como socos, chifres, espadas, adagas, até um arco e armas de fogo em disparos a queimaroupa e outros. Rolando 2d6 + Des"
+                ]
+            },
+            "atkC": {
+                "title": "Ataque a Distância",
+                "label": "AC",
+                "detail": [
+                    "Acontecem quando a arma em questão, magia ou qualquer projétil não seja da distancia do Toque, ou além de sua área de ameaça, d'esta forma os arpões arremessados, correntes chicoteadas, ataques com caudas, lanças de longa haste, e armas de disparo usarão do AD para tentar acertar seu alvo. Rolando 2d6 + ½Des"
+                ]
+            },
+            "Bq": {
+                "title": "Bloqueio",
+                "label": "Bq",
+                "detail": [
+                    "Consumindo 1 A/a, você pode usar um ataque para bloquear o ataque do oponente. No Acerto Crítico o dano será convertido na arma do oponente, assim a quebrando e absorvendo o dano que seria causado. Erro crítico causará o desarme imediato da arma.",
+                    "Caso possua Proficiência n’aquella arma, receberá um bônus de Bloqueio de +4 para armas Médias e +2 para armas Pesadas.",
+                    "Você recebe um ônus de acordo com cada situação de Bloqueio (Atacante vs. Defensor):\nAC vs. AC -0\nAD vs. AC -2\nAD vs. AD -4\nAC vs. AD -6"
                 ]
             }
         },
