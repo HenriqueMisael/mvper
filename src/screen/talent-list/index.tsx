@@ -21,7 +21,6 @@ const TalentList = () => {
       0,
     );
     const cardSize = ranksCount + titleSize + descriptionSize + preRequirementSize;
-    console.log(talent.name, cardSize);
     const node = <TalentCard key={talent.id} talent={talent} />;
 
     return {

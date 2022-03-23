@@ -34,7 +34,7 @@ const ReferencePopover = ({ content, text }: ReferencePopoverProps) => {
           ref={ref}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          style={{ textDecoration: isOpen ? 'underline' : 'inherit' }}
+          style={{ textDecoration: isOpen ? 'underline' : 'inherit', cursor: 'pointer' }}
         >
           <strong>{text}</strong>
         </span>
