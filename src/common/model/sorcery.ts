@@ -14,7 +14,8 @@ export type Sorcery = {
   power: number;
 };
 
-const entities: PureEntity[] = ['Azul', 'Branca', 'Negra', 'Verde', 'Vermelha'];
+const pureEntities: PureEntity[] = ['Azul', 'Branca', 'Negra', 'Verde', 'Vermelha'];
+export const entities: Entity[] = ['Livre', ...pureEntities];
 
 export function parseLevel(
   entityRaw: Entity,
@@ -28,7 +29,7 @@ export function parseLevel(
           .map((n, i) => {
             const amount = Number(n);
             if (amount === 0) return null;
-            return [entities[i], amount];
+            return [pureEntities[i], amount];
           })
           .filter((x) => x != null) as [PureEntity, number][]);
   const level = spheres.reduce((acc, [_, amount]) => acc + amount, 0);

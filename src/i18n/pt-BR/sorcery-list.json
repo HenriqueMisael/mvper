@@ -3,5 +3,10 @@
     "entityTitle": "Entidade {{name}}",
     "power-indicator": "Potência: {{power}}",
     "level-indicator": "Nível: {{level}}",
-    "spheres-indicator": "{{entity}}: {{level}}"
+    "spheres-indicator": "{{entity}}: {{level}}",
+    "filter": {
+        "entity": "Entidades de bruxaria",
+        "sphereRequirement": "Máximo de esferas",
+        "power": "Máximo de potência"
+    }
 }
