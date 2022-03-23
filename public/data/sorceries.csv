@@ -1,0 +1,16 @@
+Entity	Level	Power	Name	Description
+Verde	0	1	Ruatser Aigrene	Restaura 6 de Fonte de Poder.
+Verde	1	1	Anelben	Invoca uma neblina, por Nd3 turnos, visão cai pela metade.
+Verde	1	1	Oneneve	Aplica veneno arcano a uma arma, N aplicações.
+Verde	2	2	Adiv Ajrus Aigam	Magia Lançada se torna um animal de NP=N.
+Verde	2	3	Acrof ad Etion	Aumenta PV em +P e Stm +N, se for zumbi dobra.
+Verde	3	3	Acorf ed Titã	Stm do alvo se torna o dobro, durante N rodadas.
+Verde	3	3	Alob Edrev	Lança uma esfera nevoada de Veneno Arcano esverdeada, Dano de Nd6.
+Verde	3	5	Elep ed Ahcor	Molda o terreno a cobrir a pele em uma armadura de Dr: 8 Re: 80.
+Verde	4	4	Askizi	Todo dano causado durante N rod. serão direcionado a criatura alvo.
+Verde	4	4	Açarg ad Kierkegaard	Restaura 20 Pontos de Vida para criaturas podendo distribuí-los.
+Verde	4	5	Agra Sof	Nascer da raiz, torna uma planta em um humanóide durante N rod.
+Verde	4	5	Alob Ertserret	Lança uma esfera de terra do chão a P em Dl’s. Dano de Nd6.
+Verde	5	5	Seropnet	Produz efeitos climáticos gradativamente em N rod, durante P horas.
+Verde	5	5	Racovit Oiar	Invocar um raio em P turnos, Dano de NPd10.
+Verde	5	5	Rahnimac Serovra	Transporta-se por arvores, P em Dl’s de distância.

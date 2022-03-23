@@ -39,12 +39,6 @@ export const importTalents = async () => {
             description,
           };
         });
-      return {
-        id,
-        name,
-        description,
-        preRequirement,
-        ranks,
-      };
+      return { id, name, description, preRequirement, ranks } as Talent;
     });
 };
