@@ -4,9 +4,14 @@
     "power-indicator": "Potência: {{power}}",
     "level-indicator": "Nível: {{level}}",
     "spheres-indicator": "{{entity}}: {{level}}",
+    "noResults": "Não há nenhuma bruxaria para os filtros selecionados.",
     "filter": {
         "entity": "Entidades de bruxaria",
-        "sphereRequirement": "Máximo de esferas",
-        "power": "Máximo de potência"
+        "power": "Máximo de potência",
+        "savedGrimMores": "Grim'Mores salvos"
+    },
+    "grimMor": {
+        "add": "Adicionar novo grimório",
+        "alreadyAdded": "Bruxaria {{sorceryName}} já está no grim'mor {{grimMorName}}"
     }
 }

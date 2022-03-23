@@ -1,4 +1,4 @@
-import { distribute, range } from '../util';
+import { distribute, factorial, range } from '../util';
 
 describe('Distributing utility function', () => {
   it('should try to distribute equally', () => {
@@ -71,5 +71,26 @@ describe('Range utility function', () => {
   it('should return no interval for X=Y', () => {
     expect(range(1, 1)).toEqual([]);
     expect(range(5, 5)).toEqual([]);
+  });
+});
+
+describe('Factorial utility function', () => {
+  it('should return 1! === 1', () => {
+    expect(factorial(1)).toEqual(1);
+  });
+  it('should return 2! === 2', () => {
+    expect(factorial(2)).toEqual(2);
+  });
+  it('should return 3! === 6', () => {
+    expect(factorial(3)).toEqual(6);
+  });
+  it('should return 4! === 24', () => {
+    expect(factorial(4)).toEqual(24);
+  });
+  it('should return 5! === 120', () => {
+    expect(factorial(5)).toEqual(120);
+  });
+  it('should return 6! === 720', () => {
+    expect(factorial(6)).toEqual(720);
   });
 });

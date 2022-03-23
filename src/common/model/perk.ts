@@ -17,7 +17,7 @@ export interface Perk extends ComplexEntity<PerkID, PerkLevel> {
   condition: string;
 }
 
-export const importPerks = async () => {
+export const importPerks = async (): Promise<Perk[]> => {
   const response = await fetch('/data/perks.json');
   const json = await response.json();
   return json.map((perk: any, i: number) => {

@@ -1,20 +1,20 @@
 import React from 'react';
 import { Card } from '@blueprintjs/core';
-
 import { Sorcery } from '../../../common/model/sorcery';
 
-import './sorcery-card.scss';
 import { SorceryCardHeader } from './sorcery-card-header';
-import SorceryDescription from './SorceryDescription';
+import SorceryDescription from './sorcery-description';
 import { SorceryLevelPowerIndicator } from './sorcery-level-power-indicator';
+import './sorcery-card.scss';
 
 interface Props {
   sorcery: Sorcery;
 }
 
 const SorceryCard = ({ sorcery }: Props) => {
+  const opacity = sorcery.experience.blocked ? 0.25 : 1;
   return (
-    <Card style={{ padding: 0 }}>
+    <Card style={{ position: 'relative', padding: 0, opacity }}>
       <section className="sorcery-card">
         <div className="sorcery-card-content">
           <SorceryCardHeader sorcery={sorcery} />

@@ -1,4 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
+
+import { AbstractSorcery } from '../../common/model/sorcery';
 import { RootState } from '../index';
 
 const getRoot = (state: RootState) => state.core;
@@ -16,7 +18,9 @@ export const getTalentByTalentID = createSelector([getRoot], (state) => {
 });
 
 export const getSorceryBySorceryID = createSelector([getRoot], (state) => {
-  return state.sorcery;
+  return Object.fromEntries(
+    Object.entries(state.sorcery).map(([id, json]) => [id, AbstractSorcery.fromJSON(json)]),
+  );
 });
 
 export const getCapacityByCapacityID = createSelector([getRoot], (state) => {

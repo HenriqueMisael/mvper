@@ -1,9 +1,12 @@
 import React from 'react';
-import { Checkbox, H4, UL } from '@blueprintjs/core';
+import { Button, Checkbox, Classes, H4, Icon, UL } from '@blueprintjs/core';
 import { t } from 'i18next';
+import classNames from 'classnames';
 
 import { entities } from '../../../../common/model/sorcery';
 import { useSelectedEntities } from '../../hooks';
+
+import './index.scss';
 
 const EntityFilter = () => {
   const [selectedEntities, setSelectedEntities] = useSelectedEntities();
@@ -11,11 +14,14 @@ const EntityFilter = () => {
   return (
     <section>
       <H4>{t('sorcery-list:filter.entity')}</H4>
-      <UL style={{ listStyle: 'none' }}>
+      <UL className="entity-filter-list">
         {entities.map((entity) => {
           const key = `entity-filter-${entity}`;
           return (
-            <li key={key}>
+            <li
+              key={key}
+              style={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}
+            >
               <Checkbox
                 label={entity}
                 checked={selectedEntities.includes(entity)}
@@ -25,6 +31,13 @@ const EntityFilter = () => {
                   } else {
                     setSelectedEntities(selectedEntities.filter((x: string) => x !== entity));
                   }
+                }}
+              />
+              <Button
+                className={classNames(Classes.MINIMAL)}
+                icon={<Icon icon="locate" size={12} />}
+                onClick={() => {
+                  setSelectedEntities([entity]);
                 }}
               />
             </li>

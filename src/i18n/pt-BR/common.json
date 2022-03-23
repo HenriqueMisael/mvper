@@ -11,5 +11,6 @@
     "search": "Digite para começar a buscar (Ctrl+K)",
     "screens": "Telas",
     "notFound": "Não encontrado: {{notFound}}",
-    "unknownReference": "Referência desconhecida: {{name}}"
+    "unknownReference": "Referência desconhecida: {{name}}",
+    "added": "Adicionado"
 }

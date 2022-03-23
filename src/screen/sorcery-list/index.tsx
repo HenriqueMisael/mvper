@@ -1,39 +1,28 @@
 import React, { ReactNode } from 'react';
+import { t } from 'i18next';
 
-import { useSelector } from '../../store';
-import { getSorceries } from '../../store/core/selectors';
 import FlexibleGrid from '../../components/flexible-grid';
+import NoResults from '../../components/no-results';
 import { WeightedItem } from '../../common/util';
 
 import SorceryCard from './sorcery-card';
 import SorceryListControlPanel from './sorcery-list-control-panel';
-import { usePowerFilter, useSelectedEntities, useSphereRequirementFilter } from './hooks';
+import { useFilteredSorceryList } from './hooks';
 import './index.scss';
 
 const SorceryListScreen = () => {
-  const sorceries = useSelector(getSorceries);
-  const [selectedEntities] = useSelectedEntities();
-  const [maxSpheres] = useSphereRequirementFilter();
-  const [maxPower] = usePowerFilter();
-
-  const items: WeightedItem<ReactNode>[] = sorceries
-    .filter((sorcery) => {
-      return (
-        selectedEntities.includes(sorcery.entity) &&
-        sorcery.level <= maxSpheres &&
-        sorcery.power <= maxPower
-      );
-    })
-    .map((sorcery) => {
-      const key = sorcery.id;
-      const node = <SorceryCard key={key} sorcery={sorcery} />;
-      return { t: node, weight: 1 };
-    });
+  const filteredSorceries = useFilteredSorceryList();
+  const items: WeightedItem<ReactNode>[] = filteredSorceries.map((sorcery) => {
+    const key = sorcery.id;
+    const node = <SorceryCard key={key} sorcery={sorcery} />;
+    return { t: node, weight: 1 };
+  });
 
   return (
     <div className="screen-root sorcery-list-screen-root">
       <SorceryListControlPanel />
       <div style={{ padding: '0 1rem' }}>
+        {items.length === 0 && <NoResults label={t('sorcery-list:noResults')} />}
         <FlexibleGrid items={items} size="md" />
       </div>
     </div>
