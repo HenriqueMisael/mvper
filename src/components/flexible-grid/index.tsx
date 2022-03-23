@@ -16,11 +16,14 @@ const FlexibleGrid = ({ items, size }: FlexibleGridProps) => {
 
   return (
     <div className="flexible-grid-root" ref={ref}>
-      {columns.map((column, i) => (
-        <div key={i} className="flexible-grid-column">
-          {column}
-        </div>
-      ))}
+      {columns.map((column, i) => {
+        const key = `column-${i}`;
+        return (
+          <div key={key} className="flexible-grid-column">
+            {column}
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -5,7 +5,7 @@
 
 .screen-root {
     padding-top: 50px;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $pt-app-background-color;
 
     .#{$ns}-dark & {
