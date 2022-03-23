@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { MenuItem } from '@blueprintjs/core';
+
 import { GlobalSearchOption } from '../slice/duck';
 
 interface GlobalSearchResultProps {

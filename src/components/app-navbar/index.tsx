@@ -24,6 +24,9 @@ const AppNavbar = () => {
         <NavLink to="/talent" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Button text={t('talent-list:title')} className={Classes.MINIMAL} />
         </NavLink>
+        <NavLink to="/sorcery" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Button text={t('sorcery-list:title')} className={Classes.MINIMAL} />
+        </NavLink>
       </Navbar.Group>
       <Navbar.Group align={Alignment.CENTER} className="center-navbar-group">
         <GlobalSearch />

@@ -29,3 +29,10 @@ export function distribute<T>(items: WeightedItem<T>[], groupCount: number): T[]
 
   return columns.filter((column) => column.length > 0);
 }
+
+export function range(...args: number[]) {
+  const start = args.length === 1 ? 0 : args[0];
+  const end = args.length === 1 ? args[0] : args[1];
+
+  return Array.from(new Array(end - start).keys()).map((x) => x + start);
+}

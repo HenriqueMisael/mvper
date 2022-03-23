@@ -1,0 +1,7 @@
+{
+    "title": "Bruxarias",
+    "entityTitle": "Entidade {{name}}",
+    "power-indicator": "Potência: {{power}}",
+    "level-indicator": "Nível: {{level}}",
+    "spheres-indicator": "{{entity}}: {{level}}"
+}

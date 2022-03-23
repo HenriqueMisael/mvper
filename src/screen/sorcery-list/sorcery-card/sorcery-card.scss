@@ -1,0 +1,123 @@
+.sorcery-card {
+    height: 8rem;
+    display: grid;
+    grid-template-columns: auto 2rem;
+}
+
+.sorcery-card-content {
+    display: grid;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    grid-template-areas:
+        'header header header'
+        'description description description'
+        'description description description';
+}
+
+.sorcery-level-power-indicator {
+    position: relative;
+    font-size: 0.75rem;
+}
+
+.sorcery-card-header {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-area: header;
+}
+
+.sorcery-description {
+    grid-area: description;
+}
+
+.sorcery-meter-root {
+    position: relative;
+    font-size: 0.5rem;
+}
+
+.dot {
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+
+    &.xpm {
+        &.entity {
+            top: 0;
+            left: 2em;
+        }
+
+        &:nth-child(1) {
+            top: 0.5em;
+            left: 0;
+        }
+
+        &:nth-child(2) {
+            top: 1.5em;
+            left: 1em;
+        }
+
+        &:nth-child(3) {
+            top: 1.5em;
+            left: 3em;
+        }
+
+        &:nth-child(4) {
+            top: 0.5em;
+            left: 4em;
+        }
+    }
+
+    &.power,
+    &.level {
+        &:nth-child(1) {
+            top: 1rem;
+        }
+        &:nth-child(2) {
+            top: 2.25rem;
+            left: 0.2rem;
+        }
+        &:nth-child(3) {
+            top: 3.5rem;
+            left: 0.3rem;
+        }
+        &:nth-child(4) {
+            top: 4.75rem;
+            left: 0.3rem;
+        }
+        &:nth-child(5) {
+            top: 6rem;
+            left: 0.2rem;
+        }
+    }
+
+    &.active {
+        &.level,
+        &.xpm {
+            &.entity-Livre {
+                background: radial-gradient(circle, #212121 0%, #adadad 100%);
+            }
+            &.entity-Azul {
+                background: radial-gradient(circle, #212121 0%, #1a237e 100%);
+            }
+            &.entity-Branca {
+                background: radial-gradient(circle, #212121 0%, #efefef 100%);
+            }
+            &.entity-Negra {
+                background: radial-gradient(circle, #212121 0%, #4a148c 100%);
+            }
+            &.entity-Verde {
+                background: radial-gradient(circle, #212121 0%, #1b5e20 100%);
+            }
+            &.entity-Vermelha {
+                background: radial-gradient(circle, #212121 0%, #b71c1c 100%);
+            }
+        }
+        &.power {
+            background-color: #adadad;
+        }
+    }
+}

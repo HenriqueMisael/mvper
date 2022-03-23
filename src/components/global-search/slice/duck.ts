@@ -1,10 +1,10 @@
 import { t } from 'i18next';
 import { Perk } from '../../../common/model/perk';
-import { Talent } from '../../../common/model/talent';
 import { Capacity } from '../../../common/model/capacity';
 
 export abstract class GlobalSearchOption {
   public readonly tags: string[];
+
   protected constructor(
     public readonly group: string,
     public readonly text: string,
@@ -31,11 +31,17 @@ export class PerkSearchOption extends GlobalSearchOption {
   }
 }
 
-export class TalentSearchOption extends GlobalSearchOption {
-  constructor(talent: Talent) {
-    super(t('talent-list:title'), talent.name, `/talent#${talent.id}`);
-  }
-}
+// export class TalentSearchOption extends GlobalSearchOption {
+//   constructor(talent: Talent) {
+//     super(t('talent-list:title'), talent.name, `/talent#${talent.id}`);
+//   }
+// }
+//
+// export class SorcerySearchOption extends GlobalSearchOption {
+//   constructor(sorcery: Sorcery) {
+//     super(t('sorcery-list:title'), sorcery.name, `/sorcery/${sorcery.id}`);
+//   }
+// }
 
 export class CapacitySearchOption extends GlobalSearchOption {
   constructor(capacity: Capacity) {
@@ -46,4 +52,5 @@ export class CapacitySearchOption extends GlobalSearchOption {
 export const screensSearchOptions = [
   new ScreenSearchOption('perk-list', 'perk'),
   new ScreenSearchOption('talent-list', 'talent'),
+  new ScreenSearchOption('sorcery-list', 'sorcery'),
 ];
