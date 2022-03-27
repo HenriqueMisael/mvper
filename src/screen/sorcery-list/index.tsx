@@ -7,6 +7,7 @@ import { WeightedItem } from '../../common/util';
 
 import SorceryCard from './sorcery-card';
 import SorceryListControlPanel from './sorcery-list-control-panel';
+import GrimMorSuggestions from './grim-mor/suggestions';
 import { useFilteredSorceryList } from './hooks';
 import './index.scss';
 
@@ -23,6 +24,7 @@ const SorceryListScreen = () => {
       <SorceryListControlPanel />
       <div style={{ padding: '0 1rem' }}>
         {items.length === 0 && <NoResults label={t('sorcery-list:noResults')} />}
+        <GrimMorSuggestions />
         <FlexibleGrid items={items} size="md" />
       </div>
     </div>

@@ -57,7 +57,7 @@ const GrimMorSelectionMenu = ({ sorcery }: Props) => {
         );
       })}
       <AddGrimMorInput
-        onCreate={(createdGrimMorID) => (createdGrimMorNameRef.current = createdGrimMorID)}
+        onCreate={(createdGrimMorName) => (createdGrimMorNameRef.current = createdGrimMorName)}
       />
     </Menu>
   );

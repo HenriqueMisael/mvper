@@ -193,7 +193,7 @@ export class CommonSorcery extends AbstractSorcery<'Livre'> {
   }
 }
 
-const pureEntities: PureEntity[] = ['Azul', 'Branca', 'Negra', 'Verde', 'Vermelha'];
+export const pureEntities: PureEntity[] = ['Azul', 'Branca', 'Negra', 'Verde', 'Vermelha'];
 export const entities: Entity[] = ['Livre', ...pureEntities];
 
 export const importSorceries = async (): Promise<SorceryJSON[]> => {

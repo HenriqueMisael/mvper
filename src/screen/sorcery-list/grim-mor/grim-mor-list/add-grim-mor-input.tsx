@@ -24,7 +24,7 @@ const AddGrimMorInput = ({ onCreate }: Props) => {
       onKeyUp={(evt) => {
         switch (evt.code) {
           case 'Enter':
-            dispatch(actions.grimMor.insertGrimMor(name));
+            dispatch(actions.grimMor.insertGrimMor({ name }));
             if (onCreate) onCreate(name);
             setName('');
             break;
