@@ -12,6 +12,10 @@
     },
     "grimMor": {
         "add": "Adicionar novo grimório",
-        "alreadyAdded": "Bruxaria {{sorceryName}} já está no grim'mor {{grimMorName}}"
+        "alreadyAdded": "Bruxaria {{sorceryName}} já está no grim'mor {{grimMorName}}",
+        "template": {
+            "description": "Adiciona bruxarias padrão para o primeiro nível da entidade {{entity}}",
+            "select": "Selecionar"
+        }
     }
 }

@@ -53,11 +53,11 @@ export default createSlice({
   name: 'grimMor',
   initialState,
   reducers: {
-    insertGrimMor(state, action: PayloadAction<string>) {
+    insertGrimMor(state, action: PayloadAction<{ name: string }>) {
       const nextID = Number(state.nextID) + 1;
       state.nextID = (nextID + 1).toString();
 
-      const newGrimMor = new GrimMor(nextID.toString(), action.payload, []).toJSON();
+      const newGrimMor = new GrimMor(nextID.toString(), action.payload.name, []).toJSON();
       state.grimMor[newGrimMor.id] = newGrimMor;
     },
     updateGrimMor(state, action: PayloadAction<GrimMor>) {
@@ -71,6 +71,12 @@ export default createSlice({
     },
     addSorcery(state, action: PayloadAction<{ grimMorID: GrimMorID; sorcery: SorceryJSON }>) {
       state.grimMor[action.payload.grimMorID].sorceries.push(action.payload.sorcery);
+    },
+    addSorceries(
+      state,
+      action: PayloadAction<{ grimMorID: GrimMorID; sorceries: SorceryJSON[] }>,
+    ) {
+      state.grimMor[action.payload.grimMorID].sorceries.push(...action.payload.sorceries);
     },
     removeSorcery(
       state,

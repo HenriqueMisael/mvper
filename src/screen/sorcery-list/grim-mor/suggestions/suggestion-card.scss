@@ -1,0 +1,45 @@
+.suggestion-card-root {
+    width: 16rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.entitySphere {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+
+    &.entity-Livre {
+        background: #adadad;
+    }
+    &.entity-Azul {
+        background: radial-gradient(circle, #212121 0%, #1a237e 100%);
+    }
+    &.entity-Branca {
+        background: radial-gradient(circle, #212121 0%, #efefef 100%);
+    }
+    &.entity-Negra {
+        background: radial-gradient(circle, #212121 0%, #4a148c 100%);
+    }
+    &.entity-Verde {
+        background: radial-gradient(circle, #212121 0%, #1b5e20 100%);
+    }
+    &.entity-Vermelha {
+        background: radial-gradient(circle, #212121 0%, #b71c1c 100%);
+    }
+}
+
+.suggestion-card-sorcery-list {
+    font-size: 0.8em;
+    padding: 0 20% 1em;
+    text-align: justify;
+}
+
+.suggestion-card-sorcery {
+    margin: 0;
+}
