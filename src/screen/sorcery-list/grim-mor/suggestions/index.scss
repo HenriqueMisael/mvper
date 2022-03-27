@@ -1,0 +1,22 @@
+.grim-mor-suggestions-root {
+    display: grid;
+
+    @media screen and (min-width: 1025px) {
+        grid-template-columns: auto auto auto;
+        grid-gap: 0.5rem;
+    }
+    @media screen and (min-width: 1201px) {
+        grid-template-columns: auto auto auto;
+        grid-gap: 1rem;
+    }
+    @media screen and (min-width: 1441px) {
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 1.5rem;
+    }
+    @media screen and (min-width: 1921px) {
+        grid-template-columns: auto auto auto auto auto;
+        grid-gap: 2rem;
+    }
+
+    justify-content: center;
+}

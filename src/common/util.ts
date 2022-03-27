@@ -36,3 +36,13 @@ export function range(...args: number[]) {
 
   return Array.from(new Array(end - start).keys()).map((x) => x + start);
 }
+
+export function factorial(n: number) {
+  let product = 1;
+
+  while (n > 1) {
+    product *= n--;
+  }
+
+  return product;
+}

@@ -1,6 +1,7 @@
 import { t } from 'i18next';
 import { Perk } from '../../../common/model/perk';
 import { Capacity } from '../../../common/model/capacity';
+import { GrimMor } from '../../../screen/sorcery-list/grim-mor/slice/model';
 
 export abstract class GlobalSearchOption {
   public readonly tags: string[];
@@ -46,6 +47,16 @@ export class PerkSearchOption extends GlobalSearchOption {
 export class CapacitySearchOption extends GlobalSearchOption {
   constructor(capacity: Capacity) {
     super(t('capacity-list:title'), capacity.name, `/capacity/${capacity.id}`);
+  }
+}
+
+export class GrimMorSearchOption extends GlobalSearchOption {
+  constructor(grimMor: GrimMor) {
+    super(
+      t('sorcery-list:filter.savedGrimMores'),
+      grimMor.name,
+      `/sorcery?grimMor=${grimMor.id}`,
+    );
   }
 }
 

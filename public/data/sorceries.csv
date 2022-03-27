@@ -1,8 +1,8 @@
 Entity	Level	Power	Name	Description
 Livre		1	Arutarpet	Por Toque, Dano: 1d3+P por esfriamento ou esquentamento.
 Livre		1	Mos projego	Projeta sua voz e sons em longas distâncias, até 100 m como um eco.
-Livre		1	Rahcef	Fecha e tranca portas,janelas,etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
-Livre		1	Rirba	Abrir e destranca portas,janelas,etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
+Livre		1	Rahcef	Fecha e tranca portas, janelas, etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
+Livre		1	Rirba	Abrir e destranca portas, janelas, etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
 Livre		1	Soan levitacion	Levite ou mova P x 70 em kg, enquanto você se mover apenas 1 Dl.
 Livre	0,1,0,0,0	1	Ziugo	Esfera de luz, Dano: Pd8, com alcance de Px10 em Dl's.
 Livre	0,0,0,1,0	2	Arrama	Uma corda mágica amarra o alvo com Stm: 1+P e RE: 10.
@@ -15,39 +15,69 @@ Livre	1,0,0,0,0	2	Megasnem	Ao gatilho, o objeto criará boca e dirá uma mensage
 Livre	0,0,0,2,0	3	Oigueer	Abre passagem para um mesmo semiplano, área de P em Dls.
 Livre	0,0,0,1,1	2	Runa Aibas	Cria uma runa arcana, pode-se preparar uma bruxaria para ser acionada com -1 sanidade.
 Livre	0,0,0,1,1	2	Adalacse ad Ahnara	Mãos e pés ficam pegajosos, possibilitando grudar-se a paredes e teto.
-Verde	0	1	Ruatser Aigrene	Restaura 6 de Fonte de Poder.
-Verde	1	1	Anelben	Invoca uma neblina, por Nd3 turnos, visão cai pela metade.
-Verde	1	1	Oneneve	Aplica veneno arcano a uma arma, N aplicações.
-Verde	2	2	Adiv Ajrus Aigam	Magia Lançada se torna um animal de NP=N.
-Verde	2	3	Acrof ad Etion	Aumenta PV em +P e Stm +N, se for zumbi dobra.
-Verde	3	3	Acorf ed Titã	Stm do alvo se torna o dobro, durante N rodadas.
-Verde	3	3	Alob Edrev	Lança uma esfera nevoada de Veneno Arcano esverdeada, Dano de Nd6.
-Verde	3	5	Elep ed Ahcor	Molda o terreno a cobrir a pele em uma armadura de Dr: 8 Re: 80.
-Verde	4	4	Askizi	Todo dano causado durante N rod. serão direcionado a criatura alvo.
-Verde	4	4	Açarg ad Kierkegaard	Restaura 20 Pontos de Vida para criaturas podendo distribuí-los.
-Verde	4	5	Agra Sof	Nascer da raiz, torna uma planta em um humanóide durante N rod.
-Verde	4	5	Alob Ertserret	Lança uma esfera de terra do chão a P em Dl’s. Dano de Nd6.
-Verde	5	5	Seropnet	Produz efeitos climáticos gradativamente em N rod, durante P horas.
-Verde	5	5	Racovit Oiar	Invocar um raio em P turnos, Dano de NPd10.
-Verde	5	5	Rahnimac Serovra	Transporta-se por arvores, P em Dl’s de distância.
-Azul	0	1	Caminhos Certos	Alvo não pode atacar durante P rodadas.
+Azul	0	1	Caminhos Certos	Alvo não pode atacar durante P turnos.
 Azul	1	1	Silencio	Área de P em Dl’s fica em total silencio.
 Azul	1	2	Omsitluco	Troca de lugar com o alvo, alcance de P em Dl’s.
-Azul	2	2	Esferas de Energia	Conjura uma esfera que fica flutuando em sua volta, Dano 3d6.
-Azul	2	4	Edadsepmet ranos	Ondas sonoras gradativamente em N rod, área de N em Dl, Dano: Nd8.
-Azul	3	3	Etropelet	Teletransporta N criaturas até P em Dl’s.
-Azul	3	3	Estudo lamentado	Alvo gastar +P em Mn nesse turno.
+Azul	2	2	Esferas de Energia	Conjura uma esfera (max.: 3) que fica flutuando em sua volta, Dano 3d6.
+Azul	2	4	Edadsepmet ranos	Ondas sonoras gradativamente em N rod, área de P em Dl, Dano: Nd8.
+Azul	3	3	Etropelet	Teletransporta ½P criaturas até N km em distância.
+Azul	3	3	Estudo lamentado	Alvo gasta +P em Pd no próximo consumo.
 Azul	3	3	Oaçatardised	Alvo fica desidratado, caindo um nível de vitalidade a cada N rod.
-Azul	4	4	Olab efct	Lança uma esfera nevoada de Energia Positiva a N em Dl’s, Dano Nd6.
-Azul	4	4	Raluna	Anula magia alvo de Potencia igual a P.
-Azul	4	4	Emrofsnart me Auga	Transforma em água um objeto, are de N em Dl’s.
+Azul	4	4	Olab efct	Lança uma esfera nevoada de Energia Positiva a P em Dl’s, Dano Nd6.
+Azul	4	4	Raluna	Anula magia alvo de Potencia igual ou menor que P.
+Azul	4	4	Emrofsnart me Auga	Transforma em água um objeto, área de N em Dl’s.
 Azul	4	4	Aicust od bruxo	Alvo não será alvo de Habilidades, durante N rod.
 Azul	5	5	Erarapmoc Megami	Projeta N clones fixos, ilusórios do alvo, durante P rod.
 Azul	5	5	Incorporare	Transfere sua alma para outro corpo.
 Azul	5	5	Ratnacnesed oproc	Retira/liberta almas incorporadas/aprisionadas.
-Vermelha	0	1	Rarujin Seterbaid	Conjura 1d4 diabretes, duração de N turnos.
-Vermelha	1	1	Petulancia	Raio de impulso arremessa o Alvo a P em Dl’s, Dano: P/3 em d6.
-Vermelha	1	1	Orassap ed Pyron	Cria um Pássaro de Fogo de P/2 metros de tamanho, duração de N rod.
+Branca	0	1	Regetorp Aivitren	Protege o alvo contra efeitos de Energia Negativa.
+Branca	1	1	Brilho espiritual	Cone luminoso de P em Dl’s, Dano Nd6, cegueira durante N rod.
+Branca	1	2	Resix-tencia	Bônus de +N nos testes base, durante P turnos.
+Branca	2	2	Videre levisivni	Revela o invisível, só podendo reutilizar em P rod.
+Branca	2	2	Repmor otrom-soviv	Causa Dano de 1d6 de Energia Positiva em mortos-vivos.
+Branca	3	3	Revomer Oaçidlam	Remove Maldições e efeitos de Bruxarias do Alvo.
+Branca	3	3	Onos	Alvo entra em sono profundo. Vont + P vs. Vont
+Branca	3	4	Megal-fumac	Torna o alvo transparente durante 1dP rodadas.
+Branca	4	4	Intrare Andaretnem	Adentra na mente do alvo superficialmente.
+Branca	4	4	Pesadelo do Tenso	Quando o alvo morrer, então regenere sua Mn igual à Pd do alvo.
+Branca	4	4	Prohibere Artnetem	Impede invasões mentais durante N rodadas.
+Branca	4	4	Eceseuq	O alvo esquece o que aconteceu em uma cena entre P horas atrás.
+Branca	5	5	Excedere o Poder	Gasta Mana não disponível, N rod depois pagando-as.
+Branca	5	5	Mevun Aivitren	Destrói morto-vivos em uma área de P em Dls e cura total a todos os outros.
+Branca	5	5	Raticser Sadivi	Ressuscita uma criatura de P em NP morta a até N rod.
+Negra	0	1	Regetorp Aitisenp	Protege o alvo contra efeitos de Energia Positiva.
+Negra	1	1	Orus Nomed	Cone de escuridão de P em Dl’s, anulando qualquer luz.
+Negra	1	1	Olab Spetron	Lança uma esfera nevoada de Energia Negativa a P em Dl’s, Dano Nd6.
+Negra	2	2	Arcuar otrom-soviv	Regenera Dano de Nd6 em mortos-vivos.
+Negra	2	3	Flecha do Dragão	Encanta Flecha, quando disparada seu efeito causará medo e pavor 12 vs. Vont.
+Negra	3	3	Sussurros do além	Duas bruxarias terão +P de efetividade e +2 Mn no uso.
+Negra	3	4	Rajurrefne	Enferruja área de N em Dl’s com dano de 10xP a metais.
+Negra	3	5	Rasluper	Repulsa criaturas de até N em NP’s na área de P em Dl’s, por N rod.
+Negra	4	5	Punhos místicos	O golpe causará dreno de Pd igual a P, uso acumulativo.
+Negra	4	5	Otnemata Aigern	Amarras de energia prendem os alvos transferindo P em Pd por rod.
+Negra	4	5	Ramrofsnart	O Alvo é transmutado em humanoide de até N em NP.
+Negra	4	5	Egrus Anatnap	Transmuta área de P em Dl’s em pântano.
+Negra	5	5	Mevun Asonenev	Surge uma nuvem de veneno Arcano em uma aérea de P em Dl’s.
+Negra	5	5	Riurtsed Sadivi	Destrói todas as criaturas de P em NP em uma área de P em Dl’s.
+Negra	5	5	Apriz ad alma	Aprisiona o espírito do alvo em um objeto.
+Verde	0	1	Ruatser Aigrene	Restaura 6 de Fonte de Poder.
+Verde	1	1	Anelben	Invoca uma neblina, por Nd3 turnos, visão cai pela metade.
+Verde	1	1	Oneneve	Aplica N cargas de veneno arcano a uma arma, ao acertar 1 carga é consumida.
+Verde	2	2	Adiv Ajrus Aigam	Magia Lançada se torna um animal de NP=N.
+Verde	2	3	Acrof ad Etion	Aumenta Stm em +N, se for zumbi também dobrará o Pv atual, duração por P em rod.
+Verde	3	3	Relocen	Diminua para 1/P ou aumente em +1/N o tamanho e peso do alvo.
+Verde	3	3	Alob Edrev	Lança uma esfera nevoada de Veneno Arcano esverdeada, Dano de Nd6 + veneno.
+Verde	3	5	Elep ed Ahcor	Molda o terreno a cobrir a pele em uma armadura de Dr: N Re: P. Imunidade a crítico.
+Verde	4	4	Askizi	Todo dano causado durante N rod. serão direcionado a criatura alvo.
+Verde	4	4	Açarg ad Kierkegaard	Restaura 20 Pontos de Vida para criaturas podendo distribuí-los.
+Verde	4	5	Agra Sof	Nascer da raiz, torna uma planta em um humanóide NP=N durante P rod.
+Verde	4	5	Alob Ertserret	Lança uma esfera de terra do chão a P em Dl’s. Dano de Nd6.
+Verde	5	5	Seropnet	Produz efeitos climáticos gradativamente em N rod, durante P horas.
+Verde	5	5	Racovit Oiar	Invocar um raio em P turnos, Dano de NCd10.
+Verde	5	5	Rahnimac Serovra	Transporte por arvores, P alvos por N km em distância.
+Vermelha	0	1	Rarujin Seterbaid	Cria um tapete de óleo sobre 2xP em Dls conexos, que se inflama (1d6) ou congela (Des 2+)
+Vermelha	1	1	Petulancia	Raio de impulso arremessa o Alvo a N em Dl’s, Dano: Pd6.
+Vermelha	1	1	Orassap ed Pyron	Cria um Pássaro de Fogo de N categoria de tamanho, duração de P rod.
 Vermelha	2	2	Acram	Cria uma Marca Arcana no alvo, durante P horas indicam sua posição.
 Vermelha	2	2	Ragep Ivarg	Segura objetos de N kg a P em Dl’s de alcance.
 Vermelha	3	3	Amrof Laref	Transforma o alvo em um Animal com NP/2 do Alvo.
@@ -60,33 +90,3 @@ Vermelha	4	5	Acrof od Val	Convoca um vento de Stm 5 em N rod, circundam área de
 Vermelha	5	5	Aincetorirp	Aumenta ou diminui, direciona N em Dl’s de fogo.
 Vermelha	5	5	Aincetaw	Evapora ou congela, direciona N em Dl’s de águas.
 Vermelha	5	5	Megassap	Cria um Portal de até 5 Dl’s de altura em N rod que faz passagem para outro ponto conhecido, durante N rod.
-Negra	0	1	Regetorp Aitisenp	Protege o alvo contra efeitos de Energia Positiva.
-Negra	1	1	Orus Nomed	Cone de escuridão de N em Dl’s, anulando qualquer luz.
-Negra	1	1	Olab Spetron	Lança uma esfera nevoada de Energia Negativa a N em Dl’s, Dano Nd6.
-Negra	2	2	Arcuar otrom-soviv	Regenera Dano de 1d6 de irritação em mortos-vivos.
-Negra	2	3	Flecha do Dragão	Encanta Flecha, quando disparada um efeito luminoso causará medo e pavor.
-Negra	3	3	Sussurros do além	Duas bruxarias terão +50% de efetividade, o oponente renegará uma.
-Negra	3	4	Rajurrefne	Enferruja área de N em Dl’s com dano de 10xP.
-Negra	3	5	Rasluper	Repulsa criaturas de até N em NP’s na área de P em Dl’s, por N rod.
-Negra	4	5	Punhos místicos	O golpe causará dreno de En igual ao dano causado, uso acumulativo.
-Negra	4	5	Otnemata Aigern	Amarras de energia prendem os alvos transferindo P em Mn por rod.
-Negra	4	5	Ramrofsnart	O Alvo é transmutado em outro de até N em NP.
-Negra	4	5	Egrus Anatnap	Transmuta área de P em Dl’s em pântano.
-Negra	5	5	Mevun Asonenev	Surge uma nuvem de veneno Arcano em uma aérea de P em Dl’s.
-Negra	5	5	Riurtsed Sadivi	Destrói todas as criaturas de P em NP em uma área de P em Dl’s.
-Negra	5	5	Apriz ad alma	Aprisiona o espírito do alvo em um objeto.
-Branca	0	1	Regetorp Aivitren	Protege o alvo contra efeitos de Energia Negativa.
-Branca	1	1	Brilho espiritual	Cone luminoso de N em Dl’s, Dano Nd6, cegueira durante N rod.
-Branca	1	2	Resix-tencia	Bônus de +N nos testes base, durante P turnos.
-Branca	2	2	Videre levisivni	Ver o invisível, durante N rod, reutilizar em N horas.
-Branca	2	2	Repmor otrom-soviv	Causa Dano de 1d6 de irritação em mortos-vivos.
-Branca	3	3	Revomer Oaçidlam	Remove Maldições e efeitos de Bruxarias do Alvo.
-Branca	3	3	Onos	Alvo entra em sono profundo.
-Branca	3	4	Megal-fumac	Torna o alvo transparente durante NdP rodadas.
-Branca	4	4	Intrare Andaretnem	Adentra na mente do alvo superficialmente.
-Branca	4	4	Pesadelo do Tenso	Quando o alvo morrer, então regenere sua Mn igual à FP do alvo.
-Branca	4	4	Prohibere Artnetem	Impede invasões mentais durante N rodadas.
-Branca	4	4	Eceseuq	O alvo esquece o que aconteceu em uma cena entre P horas atrás.
-Branca	5	5	Excedere o Poder	Gasta Mana não disponível, N rod depois pagando-as.
-Branca	5	5	Mevun Aivitren	Em uma área de P em Dl’s, surge uma nuvem de Energia Positiva.
-Branca	5	5	Raticser Sadivi	Ressuscita todas as criaturas de P em NP em uma área de P em Dl’s.

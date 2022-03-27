@@ -10,10 +10,12 @@ interface Props {
 
 export function SorceryLevelPowerIndicator({ sorcery }: Props) {
   const spheres = sorcery.spheres.reduce((acc, [entity, amount], i) => {
-    const key = `sphere-${entity}-${i}`;
     const classes = ['level', 'dot', 'active', `entity-${entity}`];
-    const node = <span key={key} className={classNames(classes)} />;
-    range(amount).forEach(() => acc.push(node));
+    range(amount).forEach((j) => {
+      const key = `${sorcery.id}-sphere-${entity}-${i}-${j}`;
+      const node = <span key={key} className={classNames(classes)} />;
+      acc.push(node);
+    });
     return acc;
   }, [] as ReactNode[]);
 
@@ -30,7 +32,7 @@ export function SorceryLevelPowerIndicator({ sorcery }: Props) {
         if (sorcery.power > i) {
           classes.push('active');
         }
-        return <span className={classNames(classes)} />;
+        return <span key={i} className={classNames(classes)} />;
       })}
     </div>
   );

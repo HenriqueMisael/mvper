@@ -120,4 +120,38 @@
             background-color: #adadad;
         }
     }
+
+    &.distinct {
+        background-color: #1b5e20;
+    }
+
+    &.common {
+        background-color: #b71c1c;
+    }
+}
+
+.sorcery-experience-button {
+    position: absolute;
+    opacity: 0;
+    left: 0.65rem;
+
+    transition: opacity 128ms ease-in-out, top 128ms ease-in-out;
+
+    &.add {
+        top: 0.5rem;
+        &:hover {
+            top: 0.75rem;
+        }
+    }
+    &.sub {
+        top: -0.5rem;
+        &:hover {
+            top: -0.75rem;
+        }
+    }
+
+    &:hover {
+        z-index: 1;
+        opacity: 1;
+    }
 }

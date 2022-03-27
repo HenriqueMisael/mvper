@@ -1,13 +1,14 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { Capacity, CapacityID, importCapacities } from '../../common/model/capacity';
 import { importPerks, Perk, PerkID } from '../../common/model/perk';
 import { importTalents, Talent, TalentID } from '../../common/model/talent';
-import { importSorceries, Sorcery, SorceryID } from '../../common/model/sorcery';
+import { importSorceries, SorceryID, SorceryJSON } from '../../common/model/sorcery';
 
 interface CoreState {
   perk: { [k: PerkID]: Perk };
   talent: { [k: TalentID]: Talent };
-  sorcery: { [k: SorceryID]: Sorcery };
+  sorcery: { [k: SorceryID]: SorceryJSON };
   capacity: { [k: CapacityID]: Capacity };
   fetching: 'idle' | 'pending';
   error: string;
@@ -35,7 +36,7 @@ const fetchInitialDataFulfilled = (
   action: PayloadAction<{
     perksJson: Perk[];
     talentsJson: Talent[];
-    sorceriesJson: Sorcery[];
+    sorceriesJson: SorceryJSON[];
     capacitiesJson: Capacity[];
   }>,
 ) => {
