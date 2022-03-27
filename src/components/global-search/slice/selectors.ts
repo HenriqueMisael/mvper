@@ -1,12 +1,18 @@
 import { createSelector } from '@reduxjs/toolkit';
 
 import * as core from '../../../store/core/selectors';
+import * as grimMor from '../../../screen/sorcery-list/grim-mor/slice/selectors';
 
-import { CapacitySearchOption, PerkSearchOption, screensSearchOptions } from './duck';
+import {
+  CapacitySearchOption,
+  GrimMorSearchOption,
+  PerkSearchOption,
+  screensSearchOptions,
+} from './duck';
 
 export const getOptions = createSelector(
-  [core.getPerks, core.getTalents, core.getSorceries, core.getCapacities],
-  (perks, talents, sorceries, capacities) => {
+  [core.getPerks, core.getTalents, core.getSorceries, core.getCapacities, grimMor.getGrimMores],
+  (perks, talents, sorceries, capacities, grimMores) => {
     const perkOptions = perks.map((perk) => new PerkSearchOption(perk));
     /*
      TODO: search and focus on talents
@@ -17,6 +23,7 @@ export const getOptions = createSelector(
       const sorceriesOptions = sorceries.map((sorcery) => new SorcerySearchOption(sorcery));
     */
     const capacitiesOptions = capacities.map((capacity) => new CapacitySearchOption(capacity));
-    return [...screensSearchOptions, ...capacitiesOptions, ...perkOptions];
+    const grimMorOptions = grimMores.map((grimMor) => new GrimMorSearchOption(grimMor));
+    return [...screensSearchOptions, ...capacitiesOptions, ...perkOptions, ...grimMorOptions];
   },
 );
