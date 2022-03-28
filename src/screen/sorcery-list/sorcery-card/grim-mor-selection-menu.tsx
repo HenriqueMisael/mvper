@@ -36,7 +36,9 @@ const GrimMorSelectionMenu = ({ sorcery }: Props) => {
           );
         };
 
-        const disabled = grimMor.sorceries.some((sorcery) => sorcery.id === sorcery.id);
+        const disabled = grimMor.sorceries.some(
+          (grimMorSorcery) => grimMorSorcery.id === sorcery.id,
+        );
         const title = disabled
           ? t('sorcery-list:grimMor.alreadyAdded', {
               sorceryName: sorcery.name,
