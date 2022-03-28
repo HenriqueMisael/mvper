@@ -16,7 +16,7 @@ import SorceryListScreen from './screen/sorcery-list';
 function App() {
   const themeClassName = useSelector((state) => {
     const theme = selectors.session.getTheme(state);
-    return theme === 'light' ? '' : 'bp3-dark';
+    return theme === 'light' ? '' : 'bp4-dark';
   });
 
   useLoadInitialData();
