@@ -1,9 +1,9 @@
 Entity	Level	Power	Name	Description
-Livre		1	Arutarpet	Por Toque, Dano: 1d3+P por esfriamento ou esquentamento.
-Livre		1	Mos projego	Projeta sua voz e sons em longas distâncias, até 100 m como um eco.
-Livre		1	Rahcef	Fecha e tranca portas, janelas, etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
-Livre		1	Rirba	Abrir e destranca portas, janelas, etc. P determina a complexidade do alvo. 1 mais simples 5 mais extremos.
-Livre		1	Soan levitacion	Levite ou mova P x 70 em kg, enquanto você se mover apenas 1 Dl.
+Livre	0,0,0,0,0	1	Arutarpet	Por Toque, Dano: 1d3+P por esfriamento ou esquentamento.
+Livre	0,0,0,0,0	1	Mos projego	Projeta sua voz e sons em longas distâncias, até P x 100m como um eco.
+Livre	0,0,0,0,0	1	Rahcef	Fecha e tranca portas, janelas, etc. P determina a complexidade do alvo.
+Livre	0,0,0,0,0	1	Rirba	Abrir e destranca portas, janelas, etc. P determina a complexidade do alvo.
+Livre	0,0,0,0,0	1	Soan levitacion	Levite ou mova P x 70 em kg, enquanto você se mover apenas 1 Dl.
 Livre	0,1,0,0,0	1	Ziugo	Esfera de luz, Dano: Pd8, com alcance de Px10 em Dl's.
 Livre	0,0,0,1,0	2	Arrama	Uma corda mágica amarra o alvo com Stm: 1+P e RE: 10.
 Livre	0,0,0,1,0	2	Vocius Susuras	Envia ½P palavras no ar sussurradas até o alvo.
@@ -12,9 +12,10 @@ Livre	1,0,0,0,0	1	Detectary ???	Detecta o que for dito num cone de P em Dls, dur
 Livre	0,0,0,1,0	1	Ratresnoc	Repara até 10 de avarias em objetos na cena, não acumula.
 Livre	0,0,0,0,1	1	Amsap	Deixa um alvo confuso, sem A/a, durante 1d3+P turnos
 Livre	1,0,0,0,0	2	Megasnem	Ao gatilho, o objeto criará boca e dirá uma mensagem gravada.
-Livre	0,0,0,2,0	3	Oigueer	Abre passagem para um mesmo semiplano, área de P em Dls.
+Livre	1,0,0,1,0	3	Oigueer	Abre passagem para um mesmo semiplano, área de P em Dls.
 Livre	0,0,0,1,1	2	Runa Aibas	Cria uma runa arcana, pode-se preparar uma bruxaria para ser acionada com -1 sanidade.
-Livre	0,0,0,1,1	2	Adalacse ad Ahnara	Mãos e pés ficam pegajosos, possibilitando grudar-se a paredes e teto.
+Livre	0,0,1,1,0	2	Adalacse ad Ahnara	Mãos e pés ficam pegajosos, possibilitando grudar-se a paredes e teto.
+Livre	0,0,0,2,1	2	Ralaf Azerutan	Poderá falar e entender o animal e planta alvo.
 Azul	0	1	Caminhos Certos	Alvo não pode atacar durante P turnos.
 Azul	1	1	Silencio	Área de P em Dl’s fica em total silencio.
 Azul	1	2	Omsitluco	Troca de lugar com o alvo, alcance de P em Dl’s.
